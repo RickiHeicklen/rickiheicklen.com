@@ -63,3 +63,31 @@ ul li {
     font-family: 'Calibri', Arial, Helvetica, sans-serif;
     color: rgb(126, 82, 155)
 }
+
+.UMD {
+    position: relative;
+    display: inline-block;
+    /* border-bottom: 1px dotted black; */
+  }
+  
+  .UMD .attribution {
+    visibility: hidden;
+    width: 420px;
+    /* background-color: black; */
+    color: red;
+    text-align:left;
+    border-radius: 0px;
+    padding: 0px 20px;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 0;
+  }
+
+  .UMD:hover {
+    text-decoration: underline;
+  }
+  
+  .UMD:hover .attribution {
+    visibility: visible;
+  }
