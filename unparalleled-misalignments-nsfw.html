@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<head> 
+	<title>Ricki Heicklen</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	
+	<!-- Global site tag (gtag.js) // Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-205493387-1"></script>
+	<script>
+  	 window.dataLayer = window.dataLayer || [];
+  	 function gtag(){dataLayer.push(arguments);}
+  	 gtag('js', new Date());
+
+  	 gtag('config', 'UA-205493387-1');
+	</script>
+	
+</head>
+
+
+<body>
+	<!--Navigation bar-->
+	<div id="nav-placeholder">
+	</div>
+	<!--This /\ is where the Nav bar goes on the page.
+	this \/ is the code that goes and gets the nav bar content from nav.html-->
+	<script>
+	$(function(){
+	  $("#nav-placeholder").load("nav.html");
+	});
+	</script>
+	<!--end of Navigation bar-->
+	
+	<div class="page title">
+		<h1>Unparalleled Misalignments (NSFW)</h1>
+	</div>
+	
+	
+<div class="main text">
+	<div>
+	
+	<p>Not Safe for Work subset (bottom bracket? lower class?) of <a href="unparalleled-misalignments.html">Unparalleled Misalignments</a>. Peruse at your own risk. </p>
+	
+    <ul>
+		<li><div class='UMD'>Butt dial // Booty call<span class='attribution'></span></div></li>
+		<li><div class='UMD'>Manual labor // Hand job<span class='attribution'></span></div></li>
+		<li><div class='UMD'>Casual sex // Lightrail<span class='attribution'></span></div></li>
+		<li><div class='UMD'>Nuts and bolts // Comes and goes // Humpty Dumpty<span class='attribution'>-Michael Byun, Drake Thomas</span></div></li>
+		<li><div class='UMD'>Guard rails // Halter tops<span class='attribution'>-Ricki Heicklen</span></div></li>
+		<li><div class='UMD'>Union Jack // Mutual masturbation<span class='attribution'>-SYAS</span></div></li>
+		<li><div class='UMD'>Geometric mean // Circle jerk<span class='attribution'>-Aric Floyd</span></div></li>
+		<li><div class='UMD'>Bottom feeder // Ass eater<span class='attribution'>-Cardi B</span></div></li>
+		<li><div class='UMD'>Smokin' ass // Foggy bottom<span class='attribution'>-Sam Rosen</span></div></li>
+		<li><div class='UMD'>Manhole cover // Buttplug<span class='attribution'>-Brian Smiley</span></div></li>
+		<li><div class='UMD'>Pound sign // Sex symbol<span class='attribution'>-Drake Thomas</span></div></li>
+		<li><div class='UMD'>Gay marriage ban // Fruity cantaloupe<span class='attribution'>-Brian Smiley</span></div></li>
+		<li><div class='UMD'>Stick vacuum // Cocksucker<span class='attribution'>-Brian Smiley</span></div></li>
+		<li><div class='UMD'>Joint venture // Weed trip<span class='attribution'>-Stephen Casper</span></div></li>
+		<li><div class='UMD'>Bush inauguration // Marijuana legalization<span class='attribution'>-Stephen Casper</span></div></li>
+		<li><div class='UMD'>Pregame // Foreplay<span class='attribution'>-Ricki Heicklen</span></div></li>
+		<li><div class='UMD'>White hot // Firecracker<span class='attribution'>-Brian Smiley</span></div></li>
+		<li><div class='UMD'>House hunting // Domestic abuse<span class='attribution'>-Brian Smiley</span></div></li>
+		<li><div class='UMD'>Fake shit // Shampoo<span class='attribution'>-Brian Smiley</span></div></li>
+		<li><div class='UMD'>Weed wacker // Drug bust<span class='attribution'>-Aric Floyd</span></div></li>
+		<li><div class='UMD'>Sourdough // "Fuck you" money<span class='attribution'>-Brian Smiley</span></div></li>
+		<li><div class='UMD'>Freedom // Libtard<span class='attribution'>-Brian Smiley</span></div></li>
+		<li><div class='UMD'>Pot pie // Weed brownie<span class='attribution'>-Chana Messinger</span></div></li>
+		<li><div class='UMD'>Fullback // Fatass<span class='attribution'>-Jacob Falkovich</span></div></li>
+		<li><div class='UMD'>Blow job // Drug trade<span class='attribution'>-Jacob Falkovich</span></div></li>
+		<li><div class='UMD'>Hot seat // Smoking ass<span class='attribution'>-Katja Grace</span></div></li>
+		<li><div class='UMD'>Woodworking // Erectile (dys)function<span class='attribution'>-Michael Byun</span></div></li>
+		<li><div class='UMD'>Hot take // Sex scene<span class='attribution'>-Sam Marks</span></div></li>
+		<li><div class='UMD'>Drug Mule // Ass Crack<span class='attribution'>-Sam Rosen</span></div></li>
+		<li><div class='UMD'>Hitman // Fuckboy<span class='attribution'>-Stephen Casper</span></div></li>
+		<li><div class='UMD'>Queen mattress // Pillow princess<span class='attribution'>-Stephen Casper</span></div></li>
+		<li><div class='UMD'>Fuckbuddies // Smash Bros<span class='attribution'>-Uri Bram</span></div></li>
+	    
+    <br>
+	    
+	    
+    </ul>
+
+	</div>
+
+	<div id="last-updated"></div>
+		
+	<script>
+		
+		// this part gets the file name from the URL.
+		var urlArray = window.location.href.split("/");
+
+		var nameOfThisPage = urlArray[urlArray.length-1];
+
+		// this part uses the github API to get the last commit date for that file, and then writes a line the HTML body.
+
+		// future Ricki, this is a function. It is in Arrow syntax. You should learn this.
+		const getCommits = async pageName => {
+
+			var result = await fetch('https://api.github.com/repos/rickiheicklen/rickiheicklen.github.io/commits?path='+ encodeURIComponent(pageName));
+
+			var data = await result.json();
+
+			var timestamp = new Date(data[0].commit.author.date)
+			// the Date function takes a date string, and returns a date object.
+
+			//var month = timestamp.getMonth()
+
+
+			var formattedDate = timestamp.toDateString()
+
+			console.log(formattedDate)
+
+			
+
+
+			document.getElementById('last-updated').innerHTML = "<p><br><i>This page was last updated on "+ formattedDate + ".</i></p>";
+
+
+			}
+
+			// const data = await getCommits('test');
+			// Make some notes about Await and what it does.
+			// Note that you can only use await inside of an async function.
+			
+			getCommits(nameOfThisPage);
+			
+		</script>
+	</div>
