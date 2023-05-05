@@ -3,7 +3,8 @@
 body {
     margin: 60px auto;
     width: 80%;
-    color:rgb(126, 82, 155) 
+    background-color: #fffae3;
+    color:rgb(101, 27, 27) 
 
 }
 nav ul, footer ul {
@@ -18,7 +19,7 @@ nav ul li, footer ul li {
 }
 a {
     text-decoration: none;
-    color: rgb(127, 134, 231);
+    color: rgb(137, 100, 82);
 }
 a:hover {
     text-decoration: underline;
