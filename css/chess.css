@@ -1,12 +1,16 @@
 .chess-board {
+    width: 640px;
+    height: 720px;
+    background-color: black;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(8, 1fr);
+    grid-gap: 0
   }
-  
+
   .row:nth-child(odd) .square:nth-child(even),
   .row:nth-child(even) .square:nth-child(odd) {
-    background-color: #999;
+    background-color: #d96464;
   }
   
   .square {
