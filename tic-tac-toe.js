@@ -1,12 +1,18 @@
 const cells = document.querySelectorAll('td');
 let currentPlayer = 'X';
+let moves = []
 
 function handleCellClick(event) {
+  currentPlayer = (moves.length % 2 == 0) ? 'X' : 'O';
+
   const cell = event.target; // TODO: Why does this not write on the last one?
   if (cell.textContent !== '') {
     return;
   }
   cell.textContent = currentPlayer;
+  cell.classList.add(currentPlayer);
+  moves.push(cell);
+
   if (checkForWinner()) {
     alert(`${currentPlayer} wins!`);
     resetGame();
@@ -17,7 +23,7 @@ function handleCellClick(event) {
     resetGame();
     return;
   }
-  currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+//   printClasses();
 }
 
 // Implement game logic to check for a winner
@@ -64,7 +70,26 @@ function checkForTie() {
 
 function resetGame() {
   cells.forEach(cell => cell.textContent = '');
+  cells.forEach(cell => cell.classList.remove('X', 'O'));
   currentPlayer = 'X';
+  moves = [];
+}
+
+function undo() {
+    if (moves.length == 0) {
+        return;
+    }
+    prevPlayer = (moves.length % 2 == 0) ? 'O' : 'X';
+    const cell = moves.pop();
+    cell.classList.remove(prevPlayer);
+    cell.textContent = '';
+    // printClasses();
+}
+
+function printClasses() {  
+    for (let i = 0; i < cells.length; i++) {
+        console.log(cells[i].classList);
+    }
 }
 
 cells.forEach(cell => cell.addEventListener('click', handleCellClick));

@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>Tic Tac Toe</title>
+    <link rel="stylesheet" type="text/css" href="css/tic-tac-toe.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	<style>
 		td {
 			width: 50px;
@@ -14,7 +16,7 @@
 </head>
 <body>
 	<h1>Tic Tac Toe</h1>
-	<table>
+	<table id="board">
 		<tr>
 			<td id="cell-0"></td>
 			<td id="cell-1"></td>
@@ -31,6 +33,9 @@
 			<td id="cell-8"></td>
 		</tr>
 	</table>
+    <p> </p>
+    <button onclick="undo()">Undo</button>
+    <button onclick="resetGame()">Reset</button>
 	<script src="tic-tac-toe.js"></script>
 </body>
 </html>
