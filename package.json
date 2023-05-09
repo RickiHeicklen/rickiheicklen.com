@@ -2,8 +2,8 @@
     "name": "tic-tac-toe-game",
     "version": "1.0.0",
     "main": "server.js",
-
     "dependencies": {
+      "websocket": "^1.0.31",
       "ws": "^7.5.2"
     },
     "scripts": {

@@ -1,154 +1,88 @@
-let clientId;
-let gameId;
-let socket;
-let yourSymbol;
-let game;
-
-const connectBtn = document.getElementById('connectBtn')
-const newGameBtn = document.getElementById('newGame')
-const currGames = document.getElementById('currGames')
-const joinGame = document.querySelector('button[type="submit"]')
-
-
 const cells = document.querySelectorAll('td');
 let currentPlayer = 'X';
 let moves = []
 
-connectBtn.addEventListener('click', () => {
-    socket = new WebSocket('ws://localhost:8080')
-    socket.onopen = function(event) {}
-    newGameBtn.addEventListener('click', () => {
-        const payLoad = {
-            'method': 'create',
-            'clientId': clientId
-        }
+const socket = new WebSocket('ws://localhost:3000');
 
-        socket.send(JSON.stringify(payLoad))
+socket.addEventListener('open', (event) => {
+    console.log('WebSocket connection opened');
+  });
 
-    })
+socket.addEventListener('message', (event) => {
+  console.log(`Received message: ${event.data}`);
+  // Parse the incoming message as JSON
+  const message = JSON.parse(event.data);
 
-    socket.onmessage = function(msg) {
-        const data = JSON.parse(msg.data)
-        switch (data.method) {
-            case 'connect':
-                clientId = data.clientId
-                userCol.innerHTML = `UserId: ${clientId}`
-                userCol.classList.add('joinLabel')
-                break
-            case 'create':
-                // inform you have successfully created the game and been added as player1
-                gameId = data.game.gameId
-                yourSymbol = data.game.players[0].symbol
-                console.log(`game id is ${gameId} and your symbol is ${yourSymbol}`)
-                cells.forEach(cell => {
-                    cell.classList.remove('x')
-                    cell.classList.remove('cirlce')
-                })
-                break
+  // Handle different types of messages
+  switch (message.type) {
+    case 'move':
+      // Update the local game board based on the incoming move data
+      const { cellIndex, player } = message.data;
+      const cell = cells[cellIndex];
+      cell.textContent = player;
+      cell.classList.add(player);
+      moves.push(cell);
+      if (checkForWinner()) {
+        alert(`${player} wins!`);
+        resetGame();
+        return;
+      }
+      if (checkForTie()) {
+        alert("It's a tie!");
+        resetGame();
+        return;
+      }  
+      break;
+    case 'gameover':
+      // Display the winner or tie message
+      const { winner } = message.data;
+      if (winner) {
+        alert(`${winner} wins!`);
+      } else {
+        alert("It's a tie!");
+      }
+      resetGame();
+      break;
+    case 'reset':
+      // Reset the game board
+      // alert('The other player has reset the game.');
+      resetGame();
+      break;
+    case 'undo':
+        // Undo the last move
+        // alert('The other player has undone their last move.');
+        undoMove();
+        break;
+    default:
+      console.log(`Unknown message type: ${message.type}`);
+  }
+});
 
-            case 'gamesAvail':
-                while (currGames.firstChild) {
-                    currGames.removeChild(currGames.lastChild)
-                }
-                const games = data.games
-                games.forEach((game) => {
-                    const li = document.createElement('li')
-                    li.addEventListener('click', selectGame)
-                    li.innerText = game
-                    currGames.appendChild(li)
-                })
-                break
-            case 'join':
-                gameId = data.game.gameId
-                yourSymbol = data.game.players[1].symbol
-                console.log(`game id is ${gameId} and your symbol is ${yourSymbol}`)
-                cells.forEach(cell => {
-                    console.log(`cell classes are ${cell.classList}`)
-                    cell.classList.remove('x')
-                    cell.classList.remove('cirlce')
+socket.addEventListener('close', (event) => {
+  console.log('WebSocket connection closed');
+});
 
-                })
-                break
-            case 'updateBoard':
-                gameBoard.style.display = "grid"
-                console.log(`game updateBoard is ${data.game.board}`)
-                game = data.game
-                board = game.board
-                const symbolClass = yourSymbol == 'x' ? 'x' : 'circle'
-                gameBoard.classList.add(symbolClass)
-                index = 0
-                cells.forEach(cell => {
-                    if (board[index] == 'x')
-                        cell.classList.add('x')
-                    else if (board[index] == 'o')
-                        cell.classList.add('circle')
-                    else
-                        cell.addEventListener('click', clickCell)
-                    index++
-                })
-
-                game.players.forEach((player) => {
-                    if (player.clientId == +clientId && player.isTurn == true) {
-                        isTurn = true
-                        console.log(`your turn`)
-                    }
-                })
-                break
-
-            case 'gameEnds':
-                console.log(`Winner is ${data.winner}`)
-                window.alert(`Winner is ${data.winner}`)
-                break;
-            case 'draw':
-                alert('Its a draw')
-                break
-        }
-    }
-
-    socket.onclose = function(event) {
-
-    }
-
-    socket.onerror = function(err) {
-
-    }
-})
-
-function selectGame(src) {
-    gameId = +src.target.innerText
-    joinGame.addEventListener('click', joingm, { once: true })
-}
-
-function joingm() {
-    const payLoad = {
-        'method': 'join',
-        'clientId': clientId,
-        'gameId': gameId
-    }
-    socket.send(JSON.stringify(payLoad))
-}
+socket.addEventListener('error', (event) => {
+  console.log(`WebSocket error: ${event}`);
+});
 
 function handleCellClick(event) {
+
+  // Calculate the cell index based on the clicked element
+  const cellIndex = Array.from(cells).indexOf(event.target);
+
+  // Update the local game board
   currentPlayer = (moves.length % 2 == 0) ? 'X' : 'O';
 
-  const cell = event.target; // TODO: Why does this not write on the last one?
-  if (cell.textContent !== '') {
-    return;
-  }
-  cell.textContent = currentPlayer;
-  cell.classList.add(currentPlayer);
-  moves.push(cell);
-
-  if (checkForWinner()) {
-    alert(`${currentPlayer} wins!`);
-    resetGame();
-    return;
-  }
-  if (checkForTie()) {
-    alert("It's a tie!");
-    resetGame();
-    return;
-  }
+  // Send a message to the server with the cell index and player ID
+  const message = {
+    type: 'move',
+    data: {
+      cellIndex,
+      player: currentPlayer
+    }
+  };
+  socket.send(JSON.stringify(message));
 //   printClasses();
 }
 
@@ -194,22 +128,38 @@ function checkForTie() {
     return true;
 }
 
-function resetGame() {
-  cells.forEach(cell => cell.textContent = '');
-  cells.forEach(cell => cell.classList.remove('X', 'O'));
-  currentPlayer = 'X';
-  moves = [];
+function resetButton() {
+  // Send a message to the server to reset the game
+  const message = {
+    type: 'reset',
+    data: {}
+  };
+  socket.send(JSON.stringify(message));
 }
 
-function undo() {
+function resetGame() {
+    cells.forEach(cell => cell.textContent = '');
+    cells.forEach(cell => cell.classList.remove('X', 'O'));
+    currentPlayer = 'X';
+    moves = [];
+  }
+
+function undoButton() {
+    // Send a message to the server to undo the last move
+    const message = {
+        type: 'undo',
+        data: {}
+    };
+    socket.send(JSON.stringify(message));
+}
+
+function undoMove() {
     if (moves.length == 0) {
         return;
     }
-    prevPlayer = (moves.length % 2 == 0) ? 'O' : 'X';
-    const cell = moves.pop();
-    cell.classList.remove(prevPlayer);
-    cell.textContent = '';
-    // printClasses();
+    const cellToUndo = moves.pop();
+    cellToUndo.textContent = '';
+    cellToUndo.classList.remove('X', 'O');
 }
 
 function printClasses() {  
@@ -219,3 +169,128 @@ function printClasses() {
 }
 
 cells.forEach(cell => cell.addEventListener('click', handleCellClick));
+
+// let clientId;
+// let gameId;
+// let socket;
+// let yourSymbol;
+// let game;
+
+// const connectBtn = document.getElementById('connectBtn')
+// const newGameBtn = document.getElementById('newGame')
+// const currGames = document.getElementById('currGames')
+// const joinGame = document.querySelector('button[type="submit"]')
+
+// connectBtn.addEventListener('click', () => {
+//     socket = new WebSocket('ws://localhost:3000')
+//     socket.onopen = function(event) {}
+//     newGameBtn.addEventListener('click', () => {
+//         const payLoad = {
+//             'method': 'create',
+//             'clientId': clientId
+//         }
+
+//         socket.send(JSON.stringify(payLoad))
+
+//     })
+
+//     socket.onmessage = function(msg) {
+//         const data = JSON.parse(msg.data)
+//         switch (data.method) {
+//             case 'connect':
+//                 clientId = data.clientId
+//                 userCol.innerHTML = `UserId: ${clientId}`
+//                 userCol.classList.add('joinLabel')
+//                 break
+//             case 'create':
+//                 // inform you have successfully created the game and been added as player1
+//                 gameId = data.game.gameId
+//                 yourSymbol = data.game.players[0].symbol
+//                 console.log(`game id is ${gameId} and your symbol is ${yourSymbol}`)
+//                 cells.forEach(cell => {
+//                     cell.classList.remove('x')
+//                     cell.classList.remove('cirlce')
+//                 })
+//                 break
+
+//             case 'gamesAvail':
+//                 while (currGames.firstChild) {
+//                     currGames.removeChild(currGames.lastChild)
+//                 }
+//                 const games = data.games
+//                 games.forEach((game) => {
+//                     const li = document.createElement('li')
+//                     li.addEventListener('click', selectGame)
+//                     li.innerText = game
+//                     currGames.appendChild(li)
+//                 })
+//                 break
+//             case 'join':
+//                 gameId = data.game.gameId
+//                 yourSymbol = data.game.players[1].symbol
+//                 console.log(`game id is ${gameId} and your symbol is ${yourSymbol}`)
+//                 cells.forEach(cell => {
+//                     console.log(`cell classes are ${cell.classList}`)
+//                     cell.classList.remove('x')
+//                     cell.classList.remove('cirlce')
+
+//                 })
+//                 break
+//             case 'updateBoard':
+//                 gameBoard.style.display = "grid"
+//                 console.log(`game updateBoard is ${data.game.board}`)
+//                 game = data.game
+//                 board = game.board
+//                 const symbolClass = yourSymbol == 'x' ? 'x' : 'circle'
+//                 gameBoard.classList.add(symbolClass)
+//                 index = 0
+//                 cells.forEach(cell => {
+//                     if (board[index] == 'x')
+//                         cell.classList.add('x')
+//                     else if (board[index] == 'o')
+//                         cell.classList.add('circle')
+//                     else
+//                         cell.addEventListener('click', clickCell)
+//                     index++
+//                 })
+
+//                 game.players.forEach((player) => {
+//                     if (player.clientId == +clientId && player.isTurn == true) {
+//                         isTurn = true
+//                         console.log(`your turn`)
+//                     }
+//                 })
+//                 break
+
+//             case 'gameEnds':
+//                 console.log(`Winner is ${data.winner}`)
+//                 window.alert(`Winner is ${data.winner}`)
+//                 break;
+//             case 'draw':
+//                 alert('Its a draw')
+//                 break
+//         }
+//     }
+
+//     socket.onclose = function(event) {
+
+//     }
+
+//     socket.onerror = function(err) {
+
+//     }
+// })
+
+// function selectGame(src) {
+//     gameId = +src.target.innerText
+//     joinGame.addEventListener('click', joingm, { once: true })
+// }
+
+// function joingm() {
+//     const payLoad = {
+//         'method': 'join',
+//         'clientId': clientId,
+//         'gameId': gameId
+//     }
+//     socket.send(JSON.stringify(payLoad))
+// }
