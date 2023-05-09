@@ -1,0 +1,16 @@
+{
+    "name": "tic-tac-toe-game",
+    "version": "1.0.0",
+    "main": "server.js",
+
+    "dependencies": {
+      "ws": "^7.5.2"
+    },
+    "scripts": {
+      "start": "node server.js"
+    },
+    "author": "Ricki Heicklen",
+    "license": "MIT",
+    "description": "A Tic Tac Toe game with WebSocket support"
+  }
+  
