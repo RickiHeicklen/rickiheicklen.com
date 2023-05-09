@@ -19,6 +19,9 @@ socket.addEventListener('message', (event) => {
       // Update the local game board based on the incoming move data
       const { cellIndex, player } = message.data;
       const cell = cells[cellIndex];
+      if (cell.textContent !== '') {
+        return;
+      }
       cell.textContent = player;
       cell.classList.add(player);
       moves.push(cell);
