@@ -14,7 +14,10 @@ server.on('connection', (socket) => {
 
     // Handle the message based on the type
     switch (m.type) {
-      case 'move', 'gameover', 'undo', 'reset':
+      case 'move':
+      case 'gameover':
+      case 'undo':
+      case 'reset':
         // Make a move in the game
         server.clients.forEach((client) => {
           if (client.readyState === WebSocket.OPEN) {
