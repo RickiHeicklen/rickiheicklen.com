@@ -7,6 +7,7 @@ const socket = new WebSocket('wss://tic-tac-toe-server.herokuapp.com/');
 
 socket.addEventListener('open', (event) => {
     console.log('WebSocket connection opened');
+    console.log(`WebSocket port: ${socket.port}`);
   });
 
 socket.addEventListener('message', (event) => {
