@@ -10,7 +10,7 @@ server.on('connection', (socket) => {
     console.log(`Received message: ${data}`);
 
     // Parse the incoming message as JSON
-    const m = JSON.parse(message);
+    const m = JSON.parse(data);
 
     // Handle the message based on the type
     switch (m.type) {
