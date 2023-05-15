@@ -1,6 +1,9 @@
 {
     "name": "tic-tac-toe-game",
     "version": "1.0.0",
+    "engines": {
+      "node": "16.x"
+    },
     "main": "server.js",
     "dependencies": {
       "websocket": "^1.0.31",
