@@ -4,11 +4,32 @@
     background-color: #f4b9b9;
   }
 
-  .X {
-    background-image: url('../images/tic-tac-toe/magen_david.ico');
-    background-size: contain;
+.X {
+  /* background-image: url('../images/tic-tac-toe/magen_david.ico');
+  background-size: contain; */
+  color: #de1414;
   }
 
+.O {
+  color: #1417de;
+  }
+
+/* #game-status {
+  background-color: bisque;
+} */
+
+.XWins {
+  /* background-image: url('../images/tic-tac-toe/magen_david.ico');
+  background-size: contain; */
+  color: #de1414;
+}
+
+.OWins {
+  color: #1417de;
+}
+.Tie {
+  color: #ac14de;
+}
   /* .X::after {
     content: 'X';
     position: absolute;

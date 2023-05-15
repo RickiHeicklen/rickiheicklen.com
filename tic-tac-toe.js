@@ -1,4 +1,5 @@
 const cells = document.querySelectorAll('td');
+const gameStatus = document.querySelector('#game-status');
 let currentPlayer = 'X';
 let moves = []
 
@@ -12,6 +13,7 @@ socket.addEventListener('message', (event) => {
   console.log(`Received message: ${event.data}`);
   // Parse the incoming message as JSON
   const message = JSON.parse(event.data);
+  printClasses();
 
   // Handle different types of messages
   switch (message.type) {
@@ -26,13 +28,17 @@ socket.addEventListener('message', (event) => {
       cell.classList.add(player);
       moves.push(cell);
       if (checkForWinner()) {
-        alert(`${player} wins!`);
-        resetGame();
+        // alert(`${player} wins!`);
+        // resetGame();
+        gameStatus.classList.add(`${player}Wins`);
+        gameStatus.textContent = `${player} Wins!`;
         return;
       }
       if (checkForTie()) {
-        alert("It's a tie!");
-        resetGame();
+        // alert("It's a tie!");
+        // resetGame();
+        gameStatus.classList.add('Tie');
+        gameStatus.textContent = `It's a tie!`;
         return;
       }  
       break;
@@ -71,6 +77,9 @@ socket.addEventListener('error', (event) => {
 
 function handleCellClick(event) {
 
+    if (gameStatus.classList.contains('XWins') || gameStatus.classList.contains('OWins') || gameStatus.classList.contains('Tie')) {
+        return;
+    }
   // Calculate the cell index based on the clicked element
   const cellIndex = Array.from(cells).indexOf(event.target);
 
@@ -143,6 +152,8 @@ function resetButton() {
 function resetGame() {
     cells.forEach(cell => cell.textContent = '');
     cells.forEach(cell => cell.classList.remove('X', 'O'));
+    gameStatus.textContent = '';
+    gameStatus.classList.remove('XWins', 'OWins', 'Tie');
     currentPlayer = 'X';
     moves = [];
   }
@@ -163,12 +174,15 @@ function undoMove() {
     const cellToUndo = moves.pop();
     cellToUndo.textContent = '';
     cellToUndo.classList.remove('X', 'O');
+    gameStatus.textContent = '';
+    gameStatus.classList.remove('XWins', 'OWins', 'Tie');
 }
 
 function printClasses() {  
     for (let i = 0; i < cells.length; i++) {
         console.log(cells[i].classList);
     }
+    console.log(gameStatus.classList);
 }
 
 cells.forEach(cell => cell.addEventListener('click', handleCellClick));
