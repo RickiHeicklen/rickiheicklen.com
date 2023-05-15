@@ -36,16 +36,16 @@ socket.addEventListener('message', (event) => {
         return;
       }  
       break;
-    case 'gameover':
-      // Display the winner or tie message
-      const { winner } = message.data;
-      if (winner) {
-        alert(`${winner} wins!`);
-      } else {
-        alert("It's a tie!");
-      }
-      resetGame();
-      break;
+    // case 'gameover':
+    //   // Display the winner or tie message
+    //   const { winner } = message.data;
+    //   if (winner) {
+    //     alert(`${winner} wins!`);
+    //   } else {
+    //     alert("It's a tie!");
+    //   }
+    //   resetGame();
+    //   break;
     case 'reset':
       // Reset the game board
       // alert('The other player has reset the game.');
