@@ -3,7 +3,7 @@ const gameStatus = document.querySelector('#game-status');
 let currentPlayer = 'X';
 let moves = []
 
-const socket = new WebSocket('ws://localhost:3000');
+const socket = new WebSocket('wss://tic-tac-toe-server.herokuapp.com/');
 
 socket.addEventListener('open', (event) => {
     console.log('WebSocket connection opened');
