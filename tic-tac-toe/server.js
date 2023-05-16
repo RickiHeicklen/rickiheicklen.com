@@ -1,9 +1,6 @@
 const WebSocket = require('ws');
 
 const server = new WebSocket.Server({ noServer: true });
-// const gameState = {
-//   moves: []
-// };
 let moves_server = [];
 
 server.on('connection', (socket) => {
@@ -14,7 +11,6 @@ server.on('connection', (socket) => {
     type: 'gameState',
     data: moves_server
   };
-  // console.log('message (server): ' + JSON.stringify(message) + ' (server)');
 
   socket.send(JSON.stringify(message));
 
