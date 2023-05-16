@@ -13,7 +13,7 @@ server.on('connection', (socket) => {
     type: 'gameState',
     data: gameState.moves
   };
-  console.log('message (server): ' + JSON.stringify(message) + ' (server)');
+  // console.log('message (server): ' + JSON.stringify(message) + ' (server)');
 
   socket.send(JSON.stringify(message));
 
