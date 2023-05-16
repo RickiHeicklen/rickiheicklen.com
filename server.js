@@ -21,7 +21,7 @@ server.on('connection', (socket) => {
     switch (m.type) {
       case 'gameState':
         // Update the game state with the received move
-        const { moves } = message.data;
+        const { moves } = m.data;
         gameState.moves = moves;
         // Broadcast the updated game state to all clients
         server.clients.forEach((client) => {
@@ -29,7 +29,7 @@ server.on('connection', (socket) => {
             client.send(JSON.stringify(gameState));
           }
         });
-        break;
+        break;          
       // case 'move':
       //   // Update the game state with the received move
       //   const { cellIndex, player } = message.data;

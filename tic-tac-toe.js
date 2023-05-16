@@ -24,22 +24,22 @@ socket.addEventListener('message', (event) => {
         updateGameStatus();
         console.log(`game state (from gameState): ${m.moves} (client)`);
         break;
-     case 'move':
-        // Update the local game board based on the received move
-        const { cellIndex, player } = m.data;
-        moves.push(cellIndex);
-        updateBoard();
-        updateGameStatus();
-        console.log(`game state (from moves): ${moves} (client)`);
+    //  case 'move':
+    //     // Update the local game board based on the received move
+    //     const { cellIndex, player } = m.data;
+    //     moves.push(cellIndex);
+    //     updateBoard();
+    //     updateGameStatus();
+    //     console.log(`game state (from moves): ${moves} (client)`);
 
-        // send new gameState to the server
-        const message = {
-            type: 'gameState',
-            data: moves
-          };
-          socket.send(JSON.stringify(message));
+    //     // send new gameState to the server
+    //     const message = {
+    //         type: 'gameState',
+    //         data: moves
+    //       };
+    //       socket.send(JSON.stringify(message));
 
-        break;
+    //     break;
      default:
         console.log(`Unknown message type: ${m.type} (client)`);
         break;
@@ -66,15 +66,25 @@ socket.addEventListener('message', (event) => {
   
     // get the cell that was clicked on
     const cellIndex = Array.from(cells).indexOf(event.target);
+
+    // check if the cell is already occupied
+    if (moves.includes(cellIndex)) {
+        return;
+    }
+
     // get the player based on the number of moves
     currentPlayer = (moves.length % 2 == 0) ? 'X' : 'O';
-    // send a message to the server with the cell index and player ID
+
+    // Update the local game board based on the received move
+    moves.push(cellIndex);
+    updateBoard();
+    updateGameStatus();
+    console.log(`game state (from handleCellClick): ${moves} (client)`);
+
+    // send new gameState to the server
     const message = {
-      type: 'move',
-      data: {
-        cellIndex,
-        player: currentPlayer,
-      },
+        type: 'gameState',
+        data: moves
     };
     socket.send(JSON.stringify(message));
   }
