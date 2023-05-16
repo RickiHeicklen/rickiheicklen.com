@@ -9,7 +9,11 @@ server.on('connection', (socket) => {
   console.log('Client connected (server)');
 
   // Send the current game state to the new client
-  socket.send(JSON.stringify(gameState));
+  const message = {
+    type: 'gameState',
+    data: moves
+  };
+  socket.send(JSON.stringify(message));
 
   socket.on('message', (data) => {
     console.log(`Received message (server): ${data}`);
