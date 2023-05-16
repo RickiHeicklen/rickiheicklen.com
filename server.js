@@ -28,8 +28,7 @@ server.on('connection', (socket) => {
     switch (m.type) {
       case 'gameState':
         // Update the game state with the received move
-        const { moves } = m.data;
-        moves_server = moves;
+        moves_server = m.data;
         // Broadcast the updated game state to all clients
         server.clients.forEach((client) => {
           if (client.readyState === WebSocket.OPEN) {
