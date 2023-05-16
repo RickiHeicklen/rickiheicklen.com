@@ -4,7 +4,7 @@ const server = new WebSocket.Server({ noServer: true });
 // const gameState = {
 //   moves: []
 // };
-const moves_server = [];
+let moves_server = [];
 
 server.on('connection', (socket) => {
   console.log('Client connected (server)');
