@@ -19,10 +19,10 @@ socket.addEventListener('message', (event) => {
     switch (m.type) {
      case 'gameState':
         // Update the game state with the received move
-        moves = m.data;
+        moves = m.data.moves;
         updateBoard();
         updateGameStatus();
-        console.log(`game state (from gameState): ${m.data} (client)`);
+        console.log(`game state (from gameState): ${m.data.moves} (client)`);
         break;
     //  case 'move':
     //     // Update the local game board based on the received move
