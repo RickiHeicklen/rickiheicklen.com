@@ -1,60 +1,80 @@
 
 const cells = document.querySelectorAll('td');
 const gameStatus = document.querySelector('#game-status');
+let currentPlayer = 'X';
 let moves = [];
-let winner = null;
+
+// let gameState; // Declare the gameState variable
 
 const socket = new WebSocket('wss://tic-tac-toe-server.herokuapp.com/');
 
 socket.addEventListener('open', (event) => {
-  console.log('WebSocket connection opened (client)');
-  console.log(`WebSocket port: ${socket.port} (client)`);
+  console.log('WebSocket connection opened');
+  console.log(`WebSocket port: ${socket.port}`);
 });
   
 socket.addEventListener('message', (event) => {
-  console.log(`Received message (client): ${event.data}`);
+  console.log(`Received message: ${event.data}`);
   const m = JSON.parse(event.data);
 //   console.log(`m cells: ${m.cells}`);
 
     switch (m.type) {
      case 'gameState':
-        // Update the game state with the received move
-        moves = m.moves;
-        updateBoard();
-        updateGameStatus();
-        console.log(`game state (from gameState): ${m.moves} (client)`);
-        break;
-     case 'move':
+      const gs = m.data; // Assign the received gameState to the variable
+      console.log(`gameState cells: ${gs.cells}`);
+
+      // Update the local game board based on the received game state
+      updateBoard(gs.cells);
+      currentPlayer = gs.currentPlayer;
+      moves = getMovesFromCells(gs.cells);
+  
+      // Update the game status based on the received game state
+      gameStatus.textContent = gs.gameStatus;
+      gameStatus.className = '';
+      if (gs.gameStatus) {
+        gameStatus.classList.add(gs.gameStatus);
+      }
+        
+      // Check for winner or tie
+      if (checkForWinner()) {
+        gameStatus.classList.add(`${currentPlayer}Wins`);
+        gameStatus.textContent = `${currentPlayer} Wins!`;
+        return;
+      }
+      if (checkForTie()) {
+        gameStatus.classList.add('Tie');
+        gameStatus.textContent = `It's a tie!`;
+        return;
+      }
+      break;
+    case 'move':
         // Update the local game board based on the received move
         const { cellIndex, player } = m.data;
-        moves.push(cellIndex);
-        updateBoard();
-        updateGameStatus();
-        console.log(`game state (from moves): ${moves} (client)`);
-
-        // send new gameState to the server
-        const message = {
-            type: 'gameState',
-            data: moves
-          };
-          socket.send(JSON.stringify(message));
-
+        cells[cellIndex] = player;
+        currentPlayer = player === 'X' ? 'O' : 'X';
         break;
-     default:
-        console.log(`Unknown message type: ${m.type} (client)`);
+    // case 'reset':
+    //     // Reset the game state
+    //     // resetGameState();
+    //     break;
+    // case 'undo':
+    //     // Undo the last move
+    //     // undoMove();
+    //     break;
+    default:
+        console.log(`Unknown message type (client): ${m.type}`);
         break;
     }
   });
   
   socket.addEventListener('close', (event) => {
-    console.log('WebSocket connection closed (client)');
+    console.log('WebSocket connection closed');
   });
   
   socket.addEventListener('error', (event) => {
-    console.log(`WebSocket error: ${event} (client)`);
+    console.log(`WebSocket error: ${event}`);
   });
-
-
+  
   function handleCellClick(event) {
     if (
       gameStatus.classList.contains('XWins') ||
@@ -64,11 +84,8 @@ socket.addEventListener('message', (event) => {
       return;
     }
   
-    // get the cell that was clicked on
     const cellIndex = Array.from(cells).indexOf(event.target);
-    // get the player based on the number of moves
-    currentPlayer = (moves.length % 2 == 0) ? 'X' : 'O';
-    // send a message to the server with the cell index and player ID
+  
     const message = {
       type: 'move',
       data: {
@@ -77,48 +94,32 @@ socket.addEventListener('message', (event) => {
       },
     };
     socket.send(JSON.stringify(message));
+
+    // gameState.cells[cellIndex] = player;
+    // gameState.currentPlayer = player === 'X' ? 'O' : 'X';
+
+    // socket.send(JSON.stringify(gameState));
+
   }
     
   // Helper function to update the game board based on the received cell values
-  function updateBoard() {
-   
-    // clear board
+  function updateBoard(cells) {
     cells.forEach((value, index) => {
-        const cell = cells[index];
-        cell.textContent = '';
-        cell.classList.remove('X');
-        cell.classList.remove('O');
-      });
-
-    // update board based on moves
-    for (i = 0; i < moves.length; i++) {
-        player = (i % 2 == 0) ? 'X' : 'O';
-        const c = cells[moves[i]];
-        c.textContent = player;
-        c.classList.add(player);
-    }
+      const cell = cells[index];
+      cell.textContent = value;
+      cell.classList.add(value);
+    });
   }
-
-  function updateGameStatus() {
-        // Check for winner or tie
-        if (checkForWinner()) {
-            gameStatus.classList.add(`${winner}Wins`);
-            gameStatus.textContent = `${winner} Wins!`;
-            return;
-        }
-        if (checkForTie()) {
-            gameStatus.classList.add('Tie');
-            gameStatus.textContent = `It's a tie!`;
-            return;
-        }
-        else {
-            player = (moves.length % 2 == 0) ? 'X' : 'O';
-            gameStatus.textContent = `It's ${player}'s turn!`;
-            gameStatus.classList.remove('XWins');
-            gameStatus.classList.remove('OWins');
-            gameStatus.classList.remove('Tie');
-        }
-
+  
+  // Helper function to extract moves from the received cell values
+  function getMovesFromCells(cells) {
+    const moves = [];
+    cells.forEach((value, index) => {
+      if (value !== '') {
+        moves.push(cells[index]);
+      }
+    });
+    return moves;
   }
     
   cells.forEach((cell) => cell.addEventListener('click', handleCellClick));
@@ -144,12 +145,10 @@ function checkForWinner() {
       if (cells[a].textContent !== '' &&
           cells[a].textContent === cells[b].textContent &&
           cells[b].textContent === cells[c].textContent) {
-        winner = cells[a].textContent;
         return true;
       }
     }
-    
-    winner = null;
+  
     return false;
   }
 
