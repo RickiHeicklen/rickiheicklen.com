@@ -1,7 +1,7 @@
 
 const cells = document.querySelectorAll('td');
 const gameStatus = document.querySelector('#game-status');
-let moves = [];
+let moves_client = [];
 let winner = null;
 
 const socket = new WebSocket('wss://tic-tac-toe-server.herokuapp.com/');
@@ -23,28 +23,12 @@ socket.addEventListener('message', (event) => {
     switch (m.type) {
      case 'gameState':
         // Update the game state with the received move
-        console.log(`game state (from gameState 1): ${m} (client)`);
-        moves = m.data;
+        console.log(`game state (from gameState 1): ${m.data} (client)`);
+        moves_client = m.data;
         updateBoard();
         updateGameStatus();
         console.log(`game state (from gameState 2): ${m.data} (client)`);
         break;
-    //  case 'move':
-    //     // Update the local game board based on the received move
-    //     const { cellIndex, player } = m.data;
-    //     moves.push(cellIndex);
-    //     updateBoard();
-    //     updateGameStatus();
-    //     console.log(`game state (from moves): ${moves} (client)`);
-
-    //     // send new gameState to the server
-    //     const message = {
-    //         type: 'gameState',
-    //         data: moves
-    //       };
-    //       socket.send(JSON.stringify(message));
-
-    //     break;
      default:
         console.log(`Unknown message type: ${m.type} (client)`);
         break;
@@ -73,23 +57,23 @@ socket.addEventListener('message', (event) => {
     const cellIndex = Array.from(cells).indexOf(event.target);
 
     // check if the cell is already occupied
-    if (moves.includes(cellIndex)) {
+    if (moves_client.includes(cellIndex)) {
         return;
     }
 
     // get the player based on the number of moves
-    currentPlayer = (moves.length % 2 == 0) ? 'X' : 'O';
+    currentPlayer = (moves_client.length % 2 == 0) ? 'X' : 'O';
 
     // Update the local game board based on the received move
-    moves.push(cellIndex);
+    moves_client.push(cellIndex);
     updateBoard();
     updateGameStatus();
-    console.log(`game state (from handleCellClick): ${moves} (client)`);
+    console.log(`game state (from handleCellClick): ${moves_client} (client)`);
 
     // send new gameState to the server
     const message = {
         type: 'gameState',
-        data: moves
+        data: moves_client
     };
     socket.send(JSON.stringify(message));
   }
@@ -105,11 +89,11 @@ socket.addEventListener('message', (event) => {
         cell.classList.remove('O');
       });
 
-      console.log(`game state (from updateBoard): ${moves} (client)`);
+      console.log(`game state (from updateBoard): ${moves_client} (client)`);
     // update board based on moves
-    for (i = 0; i < moves.length; i++) {
+    for (i = 0; i < moves_client.length; i++) {
         player = (i % 2 == 0) ? 'X' : 'O';
-        const c = cells[moves[i]];
+        const c = cells[moves_client[i]];
         c.textContent = player;
         c.classList.add(player);
     }
@@ -128,7 +112,7 @@ socket.addEventListener('message', (event) => {
             return;
         }
         else {
-            player = (moves.length % 2 == 0) ? 'X' : 'O';
+            player = (moves_client.length % 2 == 0) ? 'X' : 'O';
             gameStatus.textContent = `It's ${player}'s turn!`;
             gameStatus.classList.remove('XWins');
             gameStatus.classList.remove('OWins');

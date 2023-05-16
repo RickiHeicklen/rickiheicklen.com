@@ -1,9 +1,10 @@
 const WebSocket = require('ws');
 
 const server = new WebSocket.Server({ noServer: true });
-const gameState = {
-  moves: []
-};
+// const gameState = {
+//   moves: []
+// };
+const moves_server = [];
 
 server.on('connection', (socket) => {
   console.log('Client connected (server)');
@@ -11,7 +12,7 @@ server.on('connection', (socket) => {
   // Send the current game state to the new client
   const message = {
     type: 'gameState',
-    data: gameState.moves
+    data: moves_server
   };
   // console.log('message (server): ' + JSON.stringify(message) + ' (server)');
 
@@ -28,14 +29,14 @@ server.on('connection', (socket) => {
       case 'gameState':
         // Update the game state with the received move
         const { moves } = m.data;
-        gameState.moves = moves;
+        moves_server = moves;
         // Broadcast the updated game state to all clients
         server.clients.forEach((client) => {
           if (client.readyState === WebSocket.OPEN) {
                 // send new gameState to the server
             const message = {
                 type: 'gameState',
-                data: gameState.moves
+                data: moves_server
               };
             client.send(JSON.stringify(message));
           }
