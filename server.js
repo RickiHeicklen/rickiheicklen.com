@@ -26,7 +26,12 @@ server.on('connection', (socket) => {
         // Broadcast the updated game state to all clients
         server.clients.forEach((client) => {
           if (client.readyState === WebSocket.OPEN) {
-            client.send(JSON.stringify(gameState));
+                // send new gameState to the server
+            const message = {
+                type: 'gameState',
+                data: moves
+              };
+            client.send(JSON.stringify(message));
           }
         });
         break;          
