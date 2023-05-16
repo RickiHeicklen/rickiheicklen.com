@@ -14,15 +14,20 @@ socket.addEventListener('open', (event) => {
 socket.addEventListener('message', (event) => {
   console.log(`Received message (client): ${event.data}`);
   const m = JSON.parse(event.data);
+  console.log(`Received message (client): ${m.type}`);
+  console.log(`Received message (client): ${m.data}`);
+
 //   console.log(`m cells: ${m.cells}`);
+
 
     switch (m.type) {
      case 'gameState':
         // Update the game state with the received move
-        moves = m.data.moves;
+        console.log(`game state (from gameState 1): ${m} (client)`);
+        moves = m.data;
         updateBoard();
         updateGameStatus();
-        console.log(`game state (from gameState): ${m.data.moves} (client)`);
+        console.log(`game state (from gameState 2): ${m.data} (client)`);
         break;
     //  case 'move':
     //     // Update the local game board based on the received move
@@ -100,6 +105,7 @@ socket.addEventListener('message', (event) => {
         cell.classList.remove('O');
       });
 
+      console.log(`game state (from updateBoard): ${moves} (client)`);
     // update board based on moves
     for (i = 0; i < moves.length; i++) {
         player = (i % 2 == 0) ? 'X' : 'O';
