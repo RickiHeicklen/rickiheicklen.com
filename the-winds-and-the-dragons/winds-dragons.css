@@ -1,0 +1,63 @@
+#board {
+    /* background-image: url('board-background.jpg');
+    or */
+    background-color: #f4b9b9;
+  }
+
+.X {
+  /* background-image: url('../images/tic-tac-toe/magen_david.ico');
+  background-size: contain; */
+  color: #de1414;
+  }
+
+.O {
+  color: #1417de;
+  }
+
+/* #game-status {
+  background-color: bisque;
+} */
+
+.XWins {
+  /* background-image: url('../images/tic-tac-toe/magen_david.ico');
+  background-size: contain; */
+  color: #de1414;
+}
+
+.OWins {
+  color: #1417de;
+}
+.Tie {
+  color: #ac14de;
+}
+  /* .X::after {
+    content: 'X';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    background-image: url('images/tic-tac-toe/magen_david.ico');
+    background-size: contain;
+    opacity: 0;
+    transition: opacity 0.5s;
+  } */
+  
+  /* .square.x::after, .square.o::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/tic-tac-toe/magen_david.ico');
+    background-size: contain;
+    opacity: 0;
+    transition: opacity 0.5s;
+  } */
+  
+  /* .square.o::after {
+    background-image: url('o.png');
+  } */
+/*   
+  .square.x.played::after, .square.o.played::after {
+    opacity: 1;
+  } */
+  
