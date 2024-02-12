@@ -39,7 +39,8 @@
 	<div>
 	
 	<p>This is where I maintain a list of Unparalleled Misalignments (formerly <a href="https://twitter.com/NathanpmYoung/status/1576158901778624512">quadruple entendres</a>), pairs of non-synonymous phrases where the words in one phrase are each synonyms of the words in the other. I've mantained this list since 2018; many have contributed, attributions (when known) can be seen by hovering over the Unparalleled Misalignment in question. Add your own via <a href=https://forms.gle/jKrpMbqwFKuGtN2KA >this form</a>. </p>
-	<input type="checkbox" id="toggleNSFW"> Hide NSFW
+	<input type="checkbox" id="toggleNSFW"> Hide NSFW values
+	<p></p>
 	<li><div class='UMD NSFW'>Butt dial // Booty call<span class='attribution'></span></div></li>
 	<li><div class='UMD'>Father figure // Dad bod<span class='attribution'></span></div></li>
 	<li><div class='UMD'>Home schooled // House trained<span class='attribution'></span></div></li>
@@ -484,10 +485,11 @@
 			document.getElementById('toggleNSFW').addEventListener('change', function() {
 			var nsfwDivs = document.getElementsByClassName('UMD NSFW');
 			for (var i = 0; i < nsfwDivs.length; i++) {
+				var liElement = nsfwDivs[i].closest('li');
 				if (this.checked) {
-					nsfwDivs[i].style.display = 'none';
+					liElement.style.display = 'none';
 				} else {
-					nsfwDivs[i].style.display = 'block';
+					liElement.style.display = 'list-item';
 				}
 			}
 		});
