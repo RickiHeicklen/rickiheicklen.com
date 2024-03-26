@@ -1,8 +1,19 @@
-const initialItems = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5",
-                      "Item 6", "Item 7", "Item 8", "Item 9", "Item 10",
-                      "Item 11", "Item 12", "Item 13", "Item 14", "Item 15",
-                      "Item 16", "Item 17", "Item 18", "Item 19", "Item 20",
-                      "Item 21", "Item 22", "Item 23", "Item 24", "Item 25"];
+const initialItems = [
+  "Someone nobody knows comes, does not introduce self",
+  "Someone talks for 3+ minutes about their own dead relative",
+  "Zoom shiva visitor is accidentally not on mute",
+  "What's the grammar for Hamakom Yenachem to [one person / all women]?",
+  "Two shiva visitors are exes of each other",
+  "\"How did he die?\"",
+  "Someone asks where the food is",
+  "Yahrzeit candle goes out",
+  "Somebody corrects an avel about Hilchot Aveilut",
+  "\"Was he in pain?\"",
+  "Someone clearly doesn't actually know who died",
+  "Food delivery that the aveilim can't eat",
+  "Shiva gift from shiva.com",
+  "\"Are you going to be saying Kaddish even though you're a woman?\""
+];
 let items = [...initialItems];
 
 function generateBoard() {
