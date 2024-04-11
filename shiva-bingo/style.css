@@ -2,13 +2,19 @@
   display: flex;
   justify-content: space-around;
 }
-.container-1 {
+.container-items {
   display: flex;
   flex-direction: column;
   padding: 10px;
   gap: 10px;
 }
-.container-2 {
+.container-board {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
+.buttons {
   display: flex;
   flex-direction: row;
   padding: 10px;
@@ -67,4 +73,18 @@ h1 {
 h1 span {
   flex-grow: 1;
   text-align: center;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .container-board, .container-board * {
+    visibility: visible;
+  }
+  .container-board {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 }
