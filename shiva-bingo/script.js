@@ -40,7 +40,7 @@ function generateBoard() {
     }
   }
   // Insert "How did he die?" at the middle position
-  if (freeSpace.active) displayItems.splice(12, 0, freeSpace);
+  displayItems.splice(12, 0, freeSpace.active ? freeSpace : {text: '', active: true});
 
   for (let i = 0; i < 25; i++) {
     const cell = document.createElement('div');
