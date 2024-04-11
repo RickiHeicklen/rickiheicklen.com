@@ -9,7 +9,7 @@ const initialText = [
   "Someone asks where the food is",
   "Yahrzeit candle goes out",
   "Somebody corrects an avel about Hilchot Aveilut",
-  "\"Was he in pain?\"",
+  "\"Were they in pain?\"",
   "Someone clearly doesn't actually know who died",
   "Food delivery that the aveilim can't eat",
   "Shiva gift from shiva.com",
@@ -44,7 +44,7 @@ function generateBoard() {
 
   for (let i = 0; i < 25; i++) {
     const cell = document.createElement('div');
-    cell.innerHTML = i == 12 ? "FREE SPACE<br>" : '';
+    cell.innerHTML = i == 12 ? "FREE SPACE<br><br>" : '';
     cell.innerHTML += displayItems[i].text;
     cell.className = 'bingo-cell';
     board.appendChild(cell);
