@@ -1,4 +1,4 @@
-const freeSpace = {text: "FREE SPACE\n\n\nHow did he die?", active: true};
+const freeSpace = {text: "\"How did they die?\"", active: true};
 
 const initialText = [
   "Someone nobody knows comes, does not introduce self",
@@ -44,7 +44,8 @@ function generateBoard() {
 
   for (let i = 0; i < 25; i++) {
     const cell = document.createElement('div');
-    cell.textContent = displayItems[i] ? displayItems[i].text : ''; // Use empty string if no item
+    cell.innerHTML = i == 12 ? "FREE SPACE<br>" : '';
+    cell.innerHTML += displayItems[i].text;
     cell.className = 'bingo-cell';
     board.appendChild(cell);
   }
