@@ -85,6 +85,6 @@ h1 span {
   .container-board {
     position: absolute;
     left: 0;
-    top: 0;
+    top: 50px;
   }
 }
