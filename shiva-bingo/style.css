@@ -47,3 +47,9 @@
   justify-content: space-between;
   margin-bottom: 5px;
 }
+.item-active {
+  background-color: lightgreen;
+}
+.item-inactive {
+  background-color: grey;
+}
