@@ -183,3 +183,10 @@ nav ul li a.active {
 	height: auto; /* maintains aspect ratio */
   padding: 30px;
 }
+
+.rh-header a {
+    color: #651B1B ;
+}
+.rh-header a:hover {
+  opacity: 0.8;
+}
