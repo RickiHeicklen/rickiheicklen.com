@@ -20,64 +20,46 @@
 
 <body>
 
+	<h1>Ricki Heicklen</h1>
+
 	<!--Navigation bar-->
 	<div id="nav-placeholder"></div>
-	
-	<div class="page title">
-		<h1>Contact info</h1>
-	</div>
+
   
-<div>
-	<p> If you'd like to reach me about anything, you can do so via email, Twitter, or Facebook messenger:</p> 
-	<p><em>Email address:</em> ricki@rickiheicklen.com </p>
-	<p><em>Twitter handle:</em> <a href="https://twitter.com/tradegal_">@tradegal_</a></p> 
-	<p><em>Facebook profile:</em> <a href="https://www.facebook.com/ricki.heicklen/">Ricki Heicklen</a></p> 
+<div class="main text">
+	<p> If you'd like to reach me about anything, you can do so via email, Twitter, or Facebook messenger:
+	<br>
+	<br>
 
-	<p>You are also invited to give me anonymous feedback, thoughts, jokes, etc. through <a href=https://www.admonymous.co/ricki>my admonymous page</a>.</p>
-
+	<em>Email address:</em> ricki@rickiheicklen.com
+	<br>
+	<br>
+	<em>Twitter handle:</em> <a href="https://twitter.com/tradegal_">@tradegal_</a>
+	<br>
+	<br>
+	<em>Facebook profile:</em> <a href="https://www.facebook.com/ricki.heicklen/">Ricki Heicklen</a>
+	<br>
+	<br>
+	You are also invited to give me anonymous feedback, thoughts, jokes, etc. through <a href=https://www.admonymous.co/ricki>my admonymous page</a>.</p>
+		
+	</div>
 
 	<div id="last-updated"></div>
-		
+	
 	<script>
-		
-		// this part gets the file name from the URL.
 		var urlArray = window.location.href.split("/");
-
 		var nameOfThisPage = urlArray[urlArray.length-1];
 
-		// this part uses the github API to get the last commit date for that file, and then writes a line the HTML body.
-
-		// future Ricki, this is a function. It is in Arrow syntax. You should learn this.
 		const getCommits = async pageName => {
-
 			var result = await fetch('https://api.github.com/repos/rickiheicklen/rickiheicklen.github.io/commits?path='+ encodeURIComponent(pageName));
-
 			var data = await result.json();
-
 			var timestamp = new Date(data[0].commit.author.date)
-			// the Date function takes a date string, and returns a date object.
-
-			//var month = timestamp.getMonth()
-
-
 			var formattedDate = timestamp.toDateString()
 
 			console.log(formattedDate)
 
-			
-
-
 			document.getElementById('last-updated').innerHTML = "<p><br><i>This page was last updated on "+ formattedDate + ".</i></p>";
-
-
 			}
-
-			// const data = await getCommits('test');
-			// Make some notes about Await and what it does.
-			// Note that you can only use await inside of an async function.
-			
 			getCommits(nameOfThisPage);
 			
 		</script>
-	</div>
-

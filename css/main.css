@@ -22,7 +22,8 @@ a {
     color: rgb(137, 100, 82);
 }
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline 2px;
+  text-underline-offset: 5px; /* Adjust the offset to move the underline lower */
 }
 h1 {
     font-size: 3em;
@@ -164,4 +165,21 @@ ul li {
 nav ul li a.active {
   text-decoration: underline 2px;
   text-underline-offset: 5px; /* Adjust the offset to move the underline lower */
+}
+
+.main.text {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.content {
+	flex: 1; /* ensures text content takes up the available space */
+}
+
+.profile-pic {
+	flex-shrink: 0; /* prevents the image from shrinking */
+	max-width: 300px; /* adjust based on your preference */
+	height: auto; /* maintains aspect ratio */
+  padding: 30px;
 }
