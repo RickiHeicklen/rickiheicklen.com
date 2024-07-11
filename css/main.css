@@ -185,6 +185,7 @@ nav ul li a.active {
 }
 
 .rh-header a {
+  text-decoration: none;
     color: #651B1B ;
 }
 .rh-header a:hover {
