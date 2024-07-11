@@ -159,3 +159,9 @@ ul li {
   .social-icons a:hover {
     color: #0077a8; /* color of the icons on hover */
   }
+
+
+nav ul li a.active {
+  text-decoration: underline 2px;
+  text-underline-offset: 5px; /* Adjust the offset to move the underline lower */
+}

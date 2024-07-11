@@ -27,9 +27,20 @@
 	<!--This /\ is where the Nav bar goes on the page.
 	this \/ is the code that goes and gets the nav bar content from nav.html-->
 	<script>
-	$(function(){
-	  $("#nav-placeholder").load("nav.html");
-	});
+		$(function(){
+		  // Check if the navbar is in sessionStorage
+		  let navbar = sessionStorage.getItem('navbar');
+		  if (navbar) {
+			// If navbar is cached, use it
+			$("#nav-placeholder").html(navbar);
+		  } else {
+			// If not cached, load it from nav.html
+			$("#nav-placeholder").load("nav.html", function(response) {
+			  // Store the loaded navbar in sessionStorage
+			  sessionStorage.setItem('navbar', response);
+			});
+		  }
+		});
 	</script>
 	<!--end of Navigation bar-->
 	
