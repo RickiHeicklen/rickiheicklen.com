@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head> 
+	<title>Ricki Heicklen</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-2CYW1CTPDD"></script>
+	<script src="js/gtag.js"></script>
+	<script src="nav.js"></script>
+</head>
+
+
+<body>
+	<!--Navigation bar-->
+	<div id="nav-placeholder"></div>
+
+  
+<div class="main text">
+	<div>
+		<p>I run a quantitative trading bootcamp. The next one will take place in August 2024. Fill out this interest form to be notified when registration opens.</p>
+		<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeJMLumy0HFNdddjqG-rmMIe0CmktmMVCyF1stNLcyX09WpcA/viewform?embedded=true" width="640" height="1742" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>			
+	</div>
+</div>
+
+	<div id="last-updated"></div>
+
+	<script>
+		var urlArray = window.location.href.split("/");
+		var nameOfThisPage = urlArray[urlArray.length-1];
+
+		const getCommits = async pageName => {
+			var result = await fetch('https://api.github.com/repos/rickiheicklen/rickiheicklen.github.io/commits?path='+ encodeURIComponent(pageName));
+			var data = await result.json();
+			var timestamp = new Date(data[0].commit.author.date)
+			var formattedDate = timestamp.toDateString()
+
+			console.log(formattedDate)
+
+			document.getElementById('last-updated').innerHTML = "<p><br><i>This page was last updated on "+ formattedDate + ".</i></p>";
+			}
+			getCommits(nameOfThisPage);
+			
+		</script>
