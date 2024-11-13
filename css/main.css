@@ -1,193 +1,256 @@
-
-
 body {
-    margin: 60px auto;
-    width: 80%;
-    background-color: #fffae3;
-    color:#651B1B 
+  margin: 30px 20px;
+  /* width: 80%; */
+  background-color: #fffae3;
+  color: #651b1b;
+}
 
+nav ul,
+footer ul {
+  font-family: "Calibri", "Helvetica", "Arial", "Sans-Serif";
+  padding: 0px;
+  list-style: none;
+  font-weight: bold;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: start;
+  font-size: 1em;
 }
-nav ul, footer ul {
-    font-family:'Calibri', 'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
-}
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
+
+nav ul li,
+footer ul li {
+  display: inline;
+  margin-right: 20px;
 }
 a {
-    text-decoration: none;
-    color: rgb(137, 100, 82);
+  text-decoration: none;
+  color: rgb(137, 100, 82);
 }
 a:hover {
   text-decoration: underline 2px;
-  text-underline-offset: 5px; /* Adjust the offset to move the underline lower */
+  /* text-underline-offset: 5px; Adjust the offset to move the underline lower */
 }
 h1 {
-    font-size: 3em;
-    font-family:'Calibri', 'Helvetica', 'Arial', 'Sans-Serif';
+  font-size: 2em;
+  font-family: "Calibri", "Helvetica", "Arial", "Sans-Serif";
 }
 p {
-    font-size: 1.2em;
-    line-height: 1.3em;
-    color: #333;
-    
+  font-size: 1.2em;
+  line-height: 1.3em;
+  margin: 0;
+  color: #333;
 }
 .footnote {
-    font-size: 1.0em;
-    line-height: 1.1em;
-}
-    
-footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
+  font-size: 1em;
+  line-height: 1.1em;
 }
 
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
+footer {
+  border-top: 1px solid #d5d5d5;
+  font-size: 0.8em;
+}
+
+ul.posts {
+  margin: 20px auto 40px;
+  font-size: 1.5em;
 }
 
 ul.posts li {
-    list-style: none;
-}
-
-ul li {
-    font-size: 1.2em;
-    line-height: 1.3em;
-    color: #333;
+  list-style: none;
 }
 
 #last-updated {
-    font-size: 0.7em;
-    font-family: 'Calibri', Arial, Helvetica, sans-serif;
-    color: rgb(126, 82, 155)
+  font-size: 0.7em;
+  font-family: "Calibri", Arial, Helvetica, sans-serif;
+  color: rgb(126, 82, 155);
+}
+.external-link-icon {
+  color: rgb(137, 100, 82);
+}
+.external-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.external-link svg {
+  display: none;
+}
+.external-link:hover svg {
+  display: inline;
+}
+.UMD_BODY {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1em;
+}
+.UMD {
+  position: relative;
+  font-size: 0.8em;
+  display: flex;
+  justify-content: space-between;
 }
 
-.UMD {
-    position: relative;
-    display: inline-block;
-    /* border-bottom: 1px dotted black; */
-  }
-  
-  .UMD .attribution {
-    visibility: hidden;
-    width: 420px;
-    /* background-color: black; */
-    color: red;
-    text-align:left;
-    border-radius: 0px;
-    padding: 0px 20px;
-  
-    /* Position the tooltip */
-    position: absolute;
-    z-index: 0;
-  }
+.UMD .attribution {
+  display: none;
+  /* background-color: black; */
+  color: red;
+  text-align: right;
+  padding-right: 20px;
+  border-radius: 0px;
+  font-weight: 400;
+}
 
-  .UMD:hover {
-    text-decoration: underline;
-  }
-  
-  .UMD:hover .attribution {
-    visibility: visible;
-  }
+.UMD:hover {
+  cursor: default;
+  /* background-color: #fcf1d0; */
+}
+.UMD:hover .UMD_BODY {
+  font-weight: 600;
+}
+.UMD:hover .attribution {
+  display: block;
+}
+.UMD_LIST {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  row-gap: 0.2em;
+  padding: 0;
+}
 
-  #googleForm {
-    margin-top: 40px;
-    font-size: 12px;
-    color:grey
-  }
-  
-  .alignleft {
-      float: left;
-    margin: 0px 20px 30px 0px; /* add some margin (order: top left bottom right*/
-  }
-  .alignright {
-      float: right;
-    margin: 0px 0px 30px 20px; /* add some margin (order: top left bottom right*/
-  }
-  
-  #bottom-bar {
-    background-color: #eeeeee; /* background color of the bar */
-    color: #008CBA; /* text color */
-    text-align: left; /* right the contents */
-    text-decoration: none;
-    /* padding: 5px 5px 5px 5px; add some padding */
-    position: fixed; /* fix the bar to the bottom of the screen */
-    left: 0; /* how far from the left of the page does the bar start (should be 0) */
-    bottom: 0;
-    width: 100%; /* make the bar full width */
-    font-size: 15px;
-    border-radius: 0px;
-    border-top: 2px solid rgb(170, 170, 170);
-  }
+.UMD_LIST li {
+  width: 50%;
+  padding-right: 1.2em;
+  box-sizing: border-box;
 
-  #bottom-bar-placeholder {
-    /* padding: 5px 5px 5px 5px; add some padding */
-    position: fixed; /* fix the bar to the bottom of the screen */
-    left: 0;
-    bottom: 0;
-    width: 100%; 
-  }
+  font-size: 1em;
+}
 
-  .names li {
-    float: left; /* the hovertext is false, display inline-block is still needed to remove the bullets */
-    display: inline-block;
-    margin: 0px 20px 0px 0px; /* add some margin (order: top left bottom right*/
-    font-size: 12px;
-    color: grey;
-  }
-  .names a {
-    /* font-size: 15px; size of the icons */
-    text-decoration: underline;
-  }
-  .names a:hover {
-    color: #0077a8; /* color of the icons on hover */
-  }
-  
-  .social-icons li {
-    float: right; /* the hovertext is false, display inline-block is still needed to remove the bullets */
-    display: inline-block;
-    margin: 0px 20px 0px 0px; /* add some margin (order: top left bottom right*/
-  }
-  .social-icons a {
-    color: #008CBA; /* color of the icons */
-    /* font-size: 15px; size of the icons */
-    text-decoration: none;
-  }
-  .social-icons a:hover {
-    color: #0077a8; /* color of the icons on hover */
-  }
+#googleForm {
+  margin-top: 40px;
+  font-size: 12px;
+  color: grey;
+}
 
+.alignleft {
+  float: left;
+  margin: 0px 20px 30px 0px; /* add some margin (order: top left bottom right*/
+}
+.alignright {
+  float: right;
+  margin: 0px 0px 30px 20px; /* add some margin (order: top left bottom right*/
+}
+
+#bottom-bar {
+  background-color: #eeeeee; /* background color of the bar */
+  color: #008cba; /* text color */
+  text-align: left; /* right the contents */
+  text-decoration: none;
+  /* padding: 5px 5px 5px 5px; add some padding */
+  position: fixed; /* fix the bar to the bottom of the screen */
+  left: 0; /* how far from the left of the page does the bar start (should be 0) */
+  bottom: 0;
+  width: 100%; /* make the bar full width */
+  font-size: 15px;
+  border-radius: 0px;
+  border-top: 2px solid rgb(170, 170, 170);
+}
+
+#bottom-bar-placeholder {
+  /* padding: 5px 5px 5px 5px; add some padding */
+  position: fixed; /* fix the bar to the bottom of the screen */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.names li {
+  float: left; /* the hovertext is false, display inline-block is still needed to remove the bullets */
+  display: inline-block;
+  margin: 0px 20px 0px 0px; /* add some margin (order: top left bottom right*/
+  font-size: 12px;
+  color: grey;
+}
+.names a {
+  /* font-size: 15px; size of the icons */
+  text-decoration: underline;
+}
+.names a:hover {
+  color: #0077a8; /* color of the icons on hover */
+}
+
+.social-icons li {
+  float: right; /* the hovertext is false, display inline-block is still needed to remove the bullets */
+  display: inline-block;
+  margin: 0px 20px 0px 0px; /* add some margin (order: top left bottom right*/
+}
+.social-icons a {
+  color: #008cba; /* color of the icons */
+  /* font-size: 15px; size of the icons */
+  text-decoration: none;
+}
+.social-icons a:hover {
+  color: #0077a8; /* color of the icons on hover */
+}
 
 nav ul li a.active {
   text-decoration: underline 2px;
-  text-underline-offset: 5px; /* Adjust the offset to move the underline lower */
+  /* text-underline-offset: 5px; Adjust the offset to move the underline lower */
 }
 
 .main.text {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1em;
+  justify-content: space-between;
 }
 
 .content {
-	flex: 1; /* ensures text content takes up the available space */
+  flex: 1; /* ensures text content takes up the available space */
 }
 
 .profile-pic {
-	flex-shrink: 0; /* prevents the image from shrinking */
-	max-width: 300px; /* adjust based on your preference */
-	height: auto; /* maintains aspect ratio */
-  padding: 30px;
+  flex-shrink: 0; /* prevents the image from shrinking */
+  max-width: 300px; /* adjust based on your preference */
+  height: auto; /* maintains aspect ratio */
 }
 
 .rh-header a {
   text-decoration: none;
-    color: #651B1B ;
+  color: #651b1b;
 }
 .rh-header a:hover {
   opacity: 0.8;
+}
+
+@media (min-width: 640px) {
+  body {
+    margin: 60px auto;
+    width: 80%;
+  }
+  nav ul,
+  footer ul {
+    font-family: "Calibri", "Helvetica", "Arial", "Sans-Serif";
+    padding: 0px;
+    list-style: none;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    font-size: 1.2em;
+  }
+  .main.text {
+    flex-direction: row;
+    align-items: start;
+    gap: 2em;
+    justify-content: space-between;
+  }
+  .UMD_LIST li {
+    width: 33%;
+    /* font-size: 1em; */
+    line-height: 1.2em;
+  }
 }

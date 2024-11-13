@@ -1,57 +1,108 @@
 <!DOCTYPE html>
 
-<head> 
-	<title>Ricki Heicklen</title>
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-2CYW1CTPDD"></script>
-	<script src="js/gtag.js"></script>
-	<script src="nav.js"></script>
+  <title>Ricki Heicklen</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-2CYW1CTPDD"
+  ></script>
+  <script src="js/gtag.js"></script>
+  <script src="nav.js"></script>
 </head>
 
-
 <body>
-	<!--Navigation bar-->
-	<div id="nav-placeholder"></div>
+  <!--Navigation bar-->
+  <div id="nav-placeholder"></div>
 
-  
-<div class="main text">
-	<div>
-		<p>I run a <a href="https://www.complexsystemspodcast.com/episodes/teaching-trading-ricki-heicklen/" target="_blank">trading bootcamp</a>, which teaches the fundamentals of quantitative trading &mdash; markets, order books, auctions, risk and sizing, adverse selection, arbitrage, how quant trading firms make money &mdash; typically over the course of four days.</p> 
+  <div class="main text">
+    <div>
+      <p>
+        I run a
+        <a
+          href="https://www.complexsystemspodcast.com/episodes/teaching-trading-ricki-heicklen/"
+          target="_blank"
+          >trading bootcamp</a
+        >, which teaches the fundamentals of quantitative trading &mdash;
+        markets, order books, auctions, risk and sizing, adverse selection,
+        arbitrage, how quant trading firms make money &mdash; typically over the
+        course of four days.
+      </p>
 
-		<p>The philosophy of this bootcamp is that the best way to learn to trade is by trading. We use a fake economy and exchange, run through many sessions of trading games designed to teach progressively more complex concepts, and auction off prizes at the end using our internal currency.</p>
-		
-		<p>It's an immersive program and participants are expected to attend for the entirety of the bootcamp, since the content is dense and cumulative. We generally have 15-30 students.</p>
-		
-		<p>I teach trading bootcamp with 2-3 instructors (if you've taken the bootcamp and are interested in instructing, please reach out). As of October 2024, it has been run 10 times.</p>
-		
-		<p>You can sign up for an upcoming session or register interest in future iterations below.</p>
+      <p>
+        The philosophy of this bootcamp is that the best way to learn to trade
+        is by trading. We use a fake economy and exchange, run through many
+        sessions of trading games designed to teach progressively more complex
+        concepts, and auction off prizes at the end using our internal currency.
+      </p>
 
-		<h1>November Bootcamp Signup</h1>
-		<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe9auB4NCIXGHMcv41jFsvS1go2ufVVbcKmqUk9aByFdoIigA/viewform?embedded=true" width="740" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      <p>
+        It's an immersive program and participants are expected to attend for
+        the entirety of the bootcamp, since the content is dense and cumulative.
+        We generally have 15-30 students.
+      </p>
 
-		<h1>General Interest Form</h1>
-		<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeJMLumy0HFNdddjqG-rmMIe0CmktmMVCyF1stNLcyX09WpcA/viewform?embedded=true" width="740" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-	</div>
-</div>
+      <p>
+        I teach trading bootcamp with 2-3 instructors (if you've taken the
+        bootcamp and are interested in instructing, please reach out). As of
+        October 2024, it has been run 10 times.
+      </p>
 
-	<div id="last-updated"></div>
+      <p>
+        You can sign up for an upcoming session or register interest in future
+        iterations below.
+      </p>
 
-	<script>
-		var urlArray = window.location.href.split("/");
-		var nameOfThisPage = urlArray[urlArray.length-1];
+      <h1>November Bootcamp Signup</h1>
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSe9auB4NCIXGHMcv41jFsvS1go2ufVVbcKmqUk9aByFdoIigA/viewform?embedded=true"
+        width="740"
+        height="1200"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        >Loading…</iframe
+      >
 
-		const getCommits = async pageName => {
-			var result = await fetch('https://api.github.com/repos/rickiheicklen/rickiheicklen.github.io/commits?path='+ encodeURIComponent(pageName));
-			var data = await result.json();
-			var timestamp = new Date(data[0].commit.author.date)
-			var formattedDate = timestamp.toDateString()
+      <h1>General Interest Form</h1>
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSeJMLumy0HFNdddjqG-rmMIe0CmktmMVCyF1stNLcyX09WpcA/viewform?embedded=true"
+        width="740"
+        height="500"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        >Loading…</iframe
+      >
+    </div>
+  </div>
 
-			console.log(formattedDate)
+  <div id="last-updated"></div>
 
-			document.getElementById('last-updated').innerHTML = "<p><br><i>This page was last updated on "+ formattedDate + ".</i></p>";
-			}
-			getCommits(nameOfThisPage);
-			
-		</script>
+  <script>
+    var urlArray = window.location.href.split("/");
+    var nameOfThisPage = urlArray[urlArray.length - 1];
+
+    const getCommits = async pageName => {
+      var result = await fetch(
+        "https://api.github.com/repos/rickiheicklen/rickiheicklen.github.io/commits?path=" +
+          encodeURIComponent(pageName)
+      );
+      var data = await result.json();
+      var timestamp = new Date(data[0].commit.author.date);
+      var formattedDate = timestamp.toDateString();
+
+      console.log(formattedDate);
+
+      document.getElementById("last-updated").innerHTML =
+        "<p><br><i>This page was last updated on " +
+        formattedDate +
+        ".</i></p>";
+    };
+    getCommits(nameOfThisPage);
+  </script>
+</body>
