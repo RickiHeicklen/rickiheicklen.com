@@ -21,7 +21,7 @@ footer ul {
 nav ul li,
 footer ul li {
   display: inline;
-  margin-right: 20px;
+  position: relative;
 }
 a {
   text-decoration: none;
@@ -72,12 +72,17 @@ ul.posts li {
   display: inline-flex;
   align-items: center;
   gap: 5px;
+  position: relative;
 }
 .external-link svg {
+  position: absolute;
+  top: -0em;
+  transform: scale(0.7);
+  right: -15px;
   display: none;
 }
 .external-link:hover svg {
-  display: inline;
+  display: block;
 }
 .UMD_BODY {
   display: flex;
@@ -238,8 +243,10 @@ nav ul li a.active {
     list-style: none;
     font-weight: bold;
     display: flex;
+    gap: 0.9em;
+    row-gap: 0.2em;
     flex-direction: row;
-    align-items: start;
+    align-items: center;
     font-size: 1.2em;
   }
   .main.text {
