@@ -1,478 +1,762 @@
 <!DOCTYPE html>
+<html>
+	<head> 
+		<title>Ricki Heicklen</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head> 
-	<title>Ricki Heicklen</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-
-	<!-- Google tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-2CYW1CTPDD"></script>
-	<script src="js/gtag.js"></script>
-	
-	<script src="nav.js"></script>
-</head>
-
-
-<body>
-	<!--Navigation bar-->
-	<div id="nav-placeholder"></div>
-	
-<div class="UMD_BODY">
-	
-	<p>This is where I maintain a list of Unparalleled Misalignments (formerly <a href="https://twitter.com/NathanpmYoung/status/1576158901778624512">quadruple entendres</a>), pairs of non-synonymous phrases where the words in one phrase are each synonyms of the words in the other. I've mantained this list since 2018; many have contributed, attributions (when known) can be seen by hovering over the Unparalleled Misalignment in question. Add your own via <a href=https://forms.gle/jKrpMbqwFKuGtN2KA >this form</a>. </p>
-	<div><input type="checkbox" id="toggleNSFW"> Hide NSFW values</div>
-	<ul class="UMD_LIST">
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Butt dial // Booty call</span><span class='attribution'></span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Father figure // Dad bod</span><span class='attribution'></span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Home schooled // House trained</span><span class='attribution'></span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Manual labor // Hand job</span><span class='attribution'></span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Forest fire // Amazon Kindle</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Casual sex // Lightrail</span><span class='attribution'></span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Blanket statement // Pillow talk // Cover story</span><span class='attribution'></span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Community building // Fraternity house</span><span class='attribution'></span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Nap room // Sleeper cell</span><span class='attribution'></span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Geometric mean // Circle jerk</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Bottom feeder // Ass eater</span><span class='attribution'>-Cardi B</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Unit vector // One Direction</span><span class='attribution'>-Eric Neyman</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Quick sort // Short order</span><span class='attribution'>-Joe Reeve</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Private island // Secret Key</span><span class='attribution'>-Phil Parker</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Underdog // Subwoofer</span><span class='attribution'>-Richard Ngo</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Crimson Tide // Red Sea</span><span class='attribution'>-Ricki Heicklen</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Economy class // Saving grace</span><span class='attribution'>-Skye Hersh</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Union Jack // Mutual masturbation</span><span class='attribution'>-SYAS</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Fast fashion // Taylor Swift // Quick Fix</span><span class='attribution'></span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Workers' party // Helper function</span><span class='attribution'></span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Drink menu // Spirit guide</span><span class='attribution'>-Jacob Falkovich</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Arm wrestling // Gun Control</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Full moon // Fertile Crescent</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Speed limit // Amphetamine shortage</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Wire transfer // Electric slide</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Manhole cover // Buttplug</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Criminal record // Connotation // Prison letters</span><span class='attribution'>-Chana Messinger</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Scared money // Chicken tender</span><span class='attribution'>-Dan Keys</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Service elevator // Utility maximizer</span><span class='attribution'>-Drake Thomas</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Sex symbol // Pound sign</span><span class='attribution'>-Drake Thomas</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Wave function // Beach party</span><span class='attribution'>-Eliana Lorch</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Unionized // Discharged</span><span class='attribution'>-Richard Ngo</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Hard drive // Rocky road</span><span class='attribution'>-Ricki Heicklen</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Speed date // Fast day</span><span class='attribution'>-Ricki Heicklen</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Guard rails // Halter tops</span><span class='attribution'>-Ricki Heicklen</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Late Bell // Dead Ringer</span><span class='attribution'>-Ricki Heicklen, Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Scene change // Bitcoin</span><span class='attribution'>-Skye Hersh</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Grass fed // Field agent</span><span class='attribution'>-Jacob Falkovich</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Quick jab // Prompt injection</span><span class='attribution'>-Nathan Young</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Pascal's wager // Bar bet</span><span class='attribution'>-Drake Thomas</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Foggy bottom // Smoking ass</span><span class='attribution'></span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>TED talk // Edward Said</span><span class='attribution'></span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Nuts and bolts // Comes and goes // Humpty Dumpty // Pump and dump</span><span class='attribution'></span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Emotion // Constant velocity // Pirate</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Midjourney // Intermission</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Terminal value // Gate number</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Cleaning bill // Money laundering // Greenwashing</span><span class='attribution'>-Brian Smiley, Lily Jordan</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Baywatch // Naval gazing // Ocean View</span><span class='attribution'>-Constance Li, Jacob Falkovich</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Blood vessel // Relationship</span><span class='attribution'>-Drake Thomas</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Unparalleled // Misaligned</span><span class='attribution'>-Owen Cotton-Barratt, Stephen Casper</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Party trick // Ball gag</span><span class='attribution'>-Phil Parker</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Blues scale // Depressed growth</span><span class='attribution'>-Rajashree Agrawal </span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Bush inauguration // Marijuana legalization</span><span class='attribution'>-Stephen Casper</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Cancel culture // Anti-bacterial</span><span class='attribution'>-SYAS</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>House money // Cottage cheese // Home payment</span><span class='attribution'>-Dan Keys + Stephen Casper</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Course selection // Class discrimination</span><span class='attribution'></span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Evergreen // Extrovert</span><span class='attribution'></span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Iron man // Female</span><span class='attribution'></span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Point blank // Vector space</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Minor correction // Key change</span><span class='attribution'>-Aric Floyd, Chana Messinger</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Framingham // Pig pen</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Telephone pole // Call log</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Tollbooths // Bill Gates</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Jumbo shrimp // Majority // Big Short</span><span class='attribution'>-Brian Smiley, Linch Zhang</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Birth order // Labor force</span><span class='attribution'>-Dan Keys</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Local girl // Near miss</span><span class='attribution'>-Dan Keys</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Dark horse // Nightmare</span><span class='attribution'>-Eric Neyman</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Endzone // Final destination // Last resort</span><span class='attribution'>-Linch Zhang, Cole Jackes</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Gut punch // Loot box</span><span class='attribution'>-Phil Parker</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Chicken coop // Cock cage</span><span class='attribution'>-Phil Parker</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Fish market // Poisson distribution</span><span class='attribution'>-Stephen Casper</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Harmonic mean // Constructive criticism</span><span class='attribution'>-Stephen Casper</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Cold hard truth // Spiked iced tea</span><span class='attribution'></span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Graphing calculator // Plot device</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Diversity statement // Minority report</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Power brakes // Battery Park</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Produce section // Make room</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Show business // Proof of work</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Waterbill // Welfare</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Takeout container // Murder case</span><span class='attribution'>-Nix Goldowsky-Dill</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Platform ecosystem // Shelf life</span><span class='attribution'>-Owen Cotton-Barratt</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Negative correlation // Toxic relationship</span><span class='attribution'>-Ricki Heicklen</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Chopped liver // Surgery survivor</span><span class='attribution'>-Dan Keys</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Comedy Troupe // Silly Bandz</span><span class='attribution'></span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Floor plan // Story plot</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Centrifuge // Coinbase</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Deer country // Stagnation</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Scroll lock // Document seal</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>White onion // Lightbulb</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Funky // Grand opening</span><span class='attribution'>-Chana Messinger</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Operating system // Surgical procedure</span><span class='attribution'>-Dan Keys</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Barnes and Noble // Landed gentry</span><span class='attribution'>-Linch Zhang</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Turing machine // Homogeneous system</span><span class='attribution'>-Linch Zhang</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Hot take // Fire sale</span><span class='attribution'>-Maxwell Tabarrok</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Cleveland // Break ground</span><span class='attribution'>-Nathan Young</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Charge conservation // Emotional maintenance</span><span class='attribution'>-Rajashree Agrawal </span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Musical lineup // Instrumental convergence</span><span class='attribution'>-Ricki Heicklen</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Pregame // Foreplay</span><span class='attribution'>-Ricki Heicklen</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Jewelry thief // Golden retreiver</span><span class='attribution'>-Ross Rheingans-Yoo</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Hamming circle // Pork pi(e)</span><span class='attribution'>-Stephen Casper, Ricki Heicklen</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Can opener // Fire starter</span><span class='attribution'>-Jake Eaton</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Fair trade // Lightswitch</span><span class='attribution'>-Rajashree Agrawal</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Palestine // Light beer</span><span class='attribution'>-Daniel Filan</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Road head // Street smarts</span><span class='attribution'></span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Speed stick // Hurricane</span><span class='attribution'>-Jacob Falkovich</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Jumper cable // Skipping rope</span><span class='attribution'>-Alex Young</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Lit match // Good game</span><span class='attribution'>-Alex Young</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Whole Foods // Complete mess</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Crossword // Hate speech</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Picture frame // Movie setting</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Stick vacuum // Cocksucker</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Pub etiquette // Barcode</span><span class='attribution'>-Chana Messinger</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Rock musician // Peter Singer</span><span class='attribution'>-Linch Zhang</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Post scarcity // Inbox zero</span><span class='attribution'>-Nathan Young</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Joint venture // Weed trip</span><span class='attribution'>-Stephen Casper</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Rich imagery // Dick pic</span><span class='attribution'>-Jacob Falkovich</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Jew lover // Semitrailer</span><span class='attribution'>-Jacob Falkovich</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Quizzical // Testicle</span><span class='attribution'></span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Orthogonality thesis // Declaration of Independence</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Natural log // Native tree</span><span class='attribution'>-Stephen Casper</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Goose chase // Duck hunt</span><span class='attribution'>-Stephen Casper</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Mobile home // Movie house</span><span class='attribution'>-Dan Keys</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Case sensitive // Legal tender</span><span class='attribution'>-Ross Trudeau</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Public shaming // Celebrity crush</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Right angle // Conservative perspective</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Commit message // Wedding invitaiton</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Easy choice // Natural selection</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Gay marriage ban // Fruity cantaloupe</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Sever ties // Connecticut</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Small intestine // Semicolon</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Fried bread // Hot money</span><span class='attribution'>-Hugh Dow</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Trustbuster // Oathbreaker</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>White hot // Firecracker</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>CFAR // Longview</span><span class='attribution'>-Chana Messinger</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Off the shelf // Deplatform</span><span class='attribution'>-Drake Thomas</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Rollcall // Turn signal</span><span class='attribution'>-Drake Thomas</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>High horse // Drug mule</span><span class='attribution'>-Linch Zhang</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Prompt engineering // Just-in-time manufacturing</span><span class='attribution'>-Nathan Young</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Charity Case // Nice rack</span><span class='attribution'>-Alice M</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Yellow fever // Gold rush</span><span class='attribution'>-Stephen Casper</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Fake shit // Shampoo</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Titration // Breast reduction</span><span class='attribution'>-Nathan Young</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Police emotions // Cop a feel</span><span class='attribution'>-Nathan Young</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Light switch // Small change // Minor Revision</span><span class='attribution'>-Peleg Shilo</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Discount buyer // Undertaker</span><span class='attribution'>-Jacob Falkovich</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Novice boxer // Start-up incubator</span><span class='attribution'>-Jacob Falkovich</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Batcave // Clubhouse</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Ball bearing // Party platform</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Work bench // Labor law</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Newton's law // Binding of Isaac</span><span class='attribution'>-Stephen Casper</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Culinary school // Meal prep</span><span class='attribution'>-Dan Keys</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Dynamic filter // Movie screen // Motion capture // Moving pick</span><span class='attribution'>-Dan Keys</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Maxwell's demon // Utility monster</span><span class='attribution'></span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Rental car // Truculent</span><span class='attribution'>-Nathan Young</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Key info // Musical note</span><span class='attribution'>-Rafe Kennedy</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Daily bread // Chronic pain</span><span class='attribution'></span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Elevator music // שיר המעלות</span><span class='attribution'></span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Hard cash // Stale bread</span><span class='attribution'></span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Discord // String of Insults</span><span class='attribution'>-Jacob Falkovich</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Game plot // Toy Story</span><span class='attribution'>-Jacob Falkovich</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Message length // Medium size</span><span class='attribution'>-Jacob Falkovich</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Train route // Practice run</span><span class='attribution'>-Jacob Falkovich</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>2-step verification // Dance Competition</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Bear trap // Game stop</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Biological children // Carbon copies</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Box office // Case study</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Comfort zone // Pacific theater // Bedtime stories</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Digits of pi // Finger food</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Good impression // Fine print</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>National anthem // Country music</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Solid state // Stable government</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Surgeon General // Dr. King</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Wire tap // Line dance</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Believe // Buzz off</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Dollar store // Money vault</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Graveyard // Savage Garden</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Gucci Mane // Nice hair</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Instrumental values // Music royalties</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Laptop // Thigh High</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Litter box // Trash bin</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Meditation Cushion // Thinkpad</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Parasite // Second location</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Perfect pitch // Compelling argument</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Postmates // Ex lovers</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Securities fraud // Taking stock</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Static variable // Charge differential</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Sudoku // Failed rebellion</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>By the way // Off the derech</span><span class='attribution'>-Chana Messinger</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Core strength // Central tendency</span><span class='attribution'>-Chana Messinger</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Feline // Iron Wire</span><span class='attribution'>-Chana Messinger</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>After burners // Post anonymously</span><span class='attribution'>-Dan Keys</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Moving company // Emotional intimacy</span><span class='attribution'>-Dan Keys</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Odds and ends // p-values</span><span class='attribution'>-Dan Keys</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Acid rain // Mushroom cloud</span><span class='attribution'>-Drake Thomas</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Platonic realm // Friendzone</span><span class='attribution'>-Katja Grace</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Two pointer // Double meaning // Dual Use</span><span class='attribution'>-Katja Grace</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Birthday Song // New Age music</span><span class='attribution'>-Lily Jordan</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Tech bro // E-mail</span><span class='attribution'>-Lily Jordan</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Old friend // Stalemate</span><span class='attribution'>-Nathan Young</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Coast line // Bank wire</span><span class='attribution'>-Ricki Heicklen</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Slim shady // Line sketch</span><span class='attribution'>-Sam Rosen</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Snare drum // Trap music</span><span class='attribution'>-Sam Rosen</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Weeping willow // Morning wood</span><span class='attribution'></span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>High Society // Drug culture</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Solar eclipse // Sunblock</span><span class='attribution'>-Vania</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Artificial intelligence // Fake news</span><span class='attribution'>-William Woof</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Hamstrung // Hog tied</span><span class='attribution'>-Brian Smiley, Sam Rosen</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Lab coat // Doggy style</span><span class='attribution'>-Sam Rosen, Skye Hersh</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Coke can // Drug arrest</span><span class='attribution'>-Stephen Casper</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Joint distribution // Drug dealing</span><span class='attribution'>-Phil Parker</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Douchebag // Shower caddy</span><span class='attribution'>-Stephen Casper</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Gaelic // Lesbian kiss</span><span class='attribution'>-Chana Messinger</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>End consumer // Ass eater</span><span class='attribution'></span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Gravity field // G-spot</span><span class='attribution'>-Nathan Young</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Bioluminescence // Fleshlight</span><span class='attribution'>-Sam Rosen</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Music critic // Vibrator</span><span class='attribution'>-Sam Rosen</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Order of magnitude // Bulk buy</span><span class='attribution'>-js</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Privilege escalation // Social climbing</span><span class='attribution'>-js</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Thunderclap // Loud applause</span><span class='attribution'>-Peleg Shilo</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Linchpin // Hangnail</span><span class='attribution'>-Phillip Harris</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Principal investigator // Debt inspector</span><span class='attribution'>-Rajashree Agrawal</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Pull up bar // Parking ban</span><span class='attribution'>-Rajashree Agrawal</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Dark souls // Black lives</span><span class='attribution'>-Jacob Falkovich</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Metaphysical // Instagram body</span><span class='attribution'>-Jacob Falkovich</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Near term // Present condition</span><span class='attribution'>-Jacob Falkovich</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Hideout // Bare skin</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Amtrak // Beeline</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Oral exam // Dental checkup</span><span class='attribution'>-Stephen Casper</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Super bass // Kingfisher</span><span class='attribution'>-Stephen Casper</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Dog whistle // Cat call</span><span class='attribution'>-Stephen Casper</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Hard to follow story // Scatter(ed) plot</span><span class='attribution'>-Chana Messinger</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Army fatigues // Touring tires</span><span class='attribution'>-Dan Keys</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Han Solo // One China</span><span class='attribution'></span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Alpha males // Amen</span><span class='attribution'></span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Too bad // Double trouble</span><span class='attribution'>-Nathan Young</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Hot dog // Firefox</span><span class='attribution'>-Sam Rosen</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Flamewar // Firefight</span><span class='attribution'>-Sam Rosen</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Bank run // Side hustle</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Wild swerve // Locomotion</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Minor correction // Juvenile detention</span><span class='attribution'>-Chana Messinger</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Birdwatcher // Eagle scout</span><span class='attribution'>-ChatGPT</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Bad boy // Junk mail</span><span class='attribution'>-Nathan Young</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Broken jaw // Smashmouth</span><span class='attribution'>-Stephen Casper</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Externalize // Out of sight</span><span class='attribution'>-Drake Thomas</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Cross-attention // Ford Focus</span><span class='attribution'></span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Father time // Parsec</span><span class='attribution'></span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>First course // Intro class</span><span class='attribution'></span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Fruit flies // Applebees</span><span class='attribution'></span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Slam poetry // Punchlines</span><span class='attribution'></span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Holy roller // Dharma wheel</span><span class='attribution'>-@gmbrighteyes</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Detailed // Unfollowed</span><span class='attribution'>-Jacob Falkovich</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Dominos delivery // Lord's salvation</span><span class='attribution'>-Jacob Falkovich</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Eggnog // Transcranial</span><span class='attribution'>-Jacob Falkovich</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Fat chance // Vast fortune</span><span class='attribution'>-Jacob Falkovich</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Switchboard // Turntable</span><span class='attribution'>-Jacob Falkovich</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Alien species // Space race</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Box cutter // Battleship</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Business class // Work study</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Case notes // Skin tones</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Constructive criticism // Fine Wine</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Digital copy // Cloud cover</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Harmonies // Joint pain // Blunt trauma</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Postcode // Afterword</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Radiohead // Wave crest</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Speed dating // Zoom meeting</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Square off // Cell death</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Stump speech // Small talk</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Texas Hold-em // State capture</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>House fire // Cabin fever // Homesick</span><span class='attribution'>-Aric Floyd, Drake Thomas</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Babylon // Keep talking</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Billboard // Congressional commitee</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Breakfast // High speed crash</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Check mark // Chess notation</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Chest Muscle // Strongbox</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Church organ // Body of Christ</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Coke Zero // Drug free</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Deadwood // Latent</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Dollar sign // Price tag</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Gas stop // Phil Parker</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Landrover // Contental Drift</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Latent Heat // Concealed firearm</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Major depression // Grand Canyon</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>No judgement // Sanskrit</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Ocean liner // Waterskin</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Partial derivative // Fractionalized asset</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Phoenix // Debt Cancellation</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Profession // Public denouncement</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Short positions // Low Places</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Sincere // Hellfire</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Soylent // I'm giving up</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Stamp act // Tap dance</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Stop sign // Countersignal</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Street food // Nominally</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Supply and demand // Give and take</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Travel expenses // Venture capital</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Turnout // Twistoff</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Unsong // One-note</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Windbreaker // Blown fuse</span><span class='attribution'>-Brian Smiley</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Value drift // Asset volatility // Cash flow</span><span class='attribution'>-Brian Smiley, Phil Parker</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Google Doc // WebMD</span><span class='attribution'>-Chana Messinger</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Rear admiral // Backseat driver</span><span class='attribution'>-Chana Messinger</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Sickness pay // Coffee</span><span class='attribution'>-Chana Messinger</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Dark matter // Midnight Mass</span><span class='attribution'>-Dan Keys</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Neighborhood watch // Local time</span><span class='attribution'>-Dan Keys</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Organic chemistry // Carbon dating</span><span class='attribution'>-Dan Keys</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Sporting goods // Virtue signaling</span><span class='attribution'>-Dan Keys</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Ballroom dance // Roundhouse kick</span><span class='attribution'>-Drake Thomas</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>𝚒𝚖𝚙𝚘𝚛𝚝 𝚖𝚊𝚝𝚑 // Significant digits</span><span class='attribution'>-Drake Thomas</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Karman line // Trucker convoy</span><span class='attribution'>-Drake Thomas</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Underwriting // Subtext</span><span class='attribution'>-Katja Grace</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Course correction // Curriculum learning</span><span class='attribution'>-Miles Turpin</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Fever pitch // Sick note</span><span class='attribution'>-Nathan Young</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Flattering // Dead wrong</span><span class='attribution'>-Nathan Young</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Rented room // Flatulent</span><span class='attribution'>-Nathan Young</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Reptile overlords // Queen Liz</span><span class='attribution'>-Nathan Young</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Spirited // Licorice</span><span class='attribution'>-Nathan Young</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Viewfinder // Seesaw</span><span class='attribution'>-Nathan Young</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Launch pad // Throw pillow</span><span class='attribution'>-Phil Parker</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>IP theft // Synthesis</span><span class='attribution'>-Richard Ngo</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Multi-cooler // Maniac</span><span class='attribution'>-Richard Ngo</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Doublespeak // Duolingo</span><span class='attribution'>-Ricki Heicklen</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Word play // Talk show</span><span class='attribution'>-Ricki Heicklen</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Bank vault // Crypt o' currency</span><span class='attribution'>-Ross Rheingans-Yoo</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Heat sink // Hot tub</span><span class='attribution'>-Ross Rheingans-Yoo</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Annul // Alpha Zero // 10 // Unzip</span><span class='attribution'>-Sam Marks</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Wirehead // Transfer of power</span><span class='attribution'>-Sam Marks</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Collateral damage // Insurance fraud</span><span class='attribution'>-Sam Rosen</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Holy see // Divine vision</span><span class='attribution'>-Sam Rosen</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Large coffee // Fat Joe</span><span class='attribution'>-Sam Rosen</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Prolapse // Olympic run</span><span class='attribution'>-Sam Rosen</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Spectrometer // Graveyard</span><span class='attribution'>-Sam Rosen</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Subway // Low road // Underpass</span><span class='attribution'>-Sam Rosen</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Smash Bros // Fuckbuddies</span><span class='attribution'></span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Flower power // Vegemite</span><span class='attribution'>-Sophia Brown</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Cave bear // Concealed carry</span><span class='attribution'>-Stephen Casper</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Primrose path // Happy trail</span><span class='attribution'>-Stephen Casper</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Sheetpan // Flatbread</span><span class='attribution'>-Stephen Casper</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Star Wars // Solar flare</span><span class='attribution'>-Stephen Casper</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Blow job // Drug trade</span><span class='attribution'>-Jacob Falkovich</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Stocking stuffer // Tight Squeeze</span><span class='attribution'>-Alex Young</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Weed wacker // Drug bust</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>*NSYNC // Drano</span><span class='attribution'></span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Deviled egg // Hellspawn</span><span class='attribution'></span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Lost Heart // Love is Blind</span><span class='attribution'>-Peleg Shilo</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Shotgun Wedding // Combined arms</span><span class='attribution'>-Peleg Shilo</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Headliner // Foreskin // Topsheet  // Front-runner</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Matchpoint // Date spot</span><span class='attribution'>-Peleg Shilo</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Pot pie // Weed brownie</span><span class='attribution'>-Chana Messinger</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Roughhousing // Broken home // Violent case // Rugged jacket</span><span class='attribution'>-Rajashree Agrawal</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Watery eye // Washed out perspective</span><span class='attribution'>-Rajashree Agrawal</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Instant noodle // Minute futzing</span><span class='attribution'>-Rajashree Agrawal</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Prima donna // First lady</span><span class='attribution'>-Watson Ladd</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Tight squeeze // Loving relationship</span><span class='attribution'>-Chana Messinger</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Dragon // Pullover</span><span class='attribution'>-Jacob Falkovich</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Neolithic // The One stone // Einstein</span><span class='attribution'>-Jacob Falkovich</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Eternal Father // Absolute motherfucker</span><span class='attribution'>-Katja Grace</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Status game arena // Level playing field</span><span class='attribution'>-Jacob Falkovich</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Pro bono // Competitive edge</span><span class='attribution'>-Jacob Falkovich</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Broadcast // Female company</span><span class='attribution'>-Nathan Young</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Funeral service // Rest mass</span><span class='attribution'>-Aric Floyd</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Drug Mule // Ass Crack</span><span class='attribution'>-Sam Rosen</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Limp bizkit // Unleavened bread</span><span class='attribution'>-Stephen Casper</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Stimulus package // Beat box</span><span class='attribution'>-Stephen Casper</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Drag performance // Smoke show</span><span class='attribution'>-Sam Rosen, Skye Hersh</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Queen mattress // Pillow princess</span><span class='attribution'>-Stephen Casper</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Meatloaf // Cockblock</span><span class='attribution'></span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Lingua Franca // French kissing</span><span class='attribution'>-Stephen Casper</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Executive function // Killer app</span><span class='attribution'>-Dan Keys</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Secular humanism // Catholic anthropology</span><span class='attribution'>-Daniel Filan</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>San Diego // Beach body</span><span class='attribution'>-Daniel Filan</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Jet lag // Delayed flight</span><span class='attribution'>-Daniel Filan</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Mile // Personal failure</span><span class='attribution'>-Daniel Filan</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Homo Sapiens // The Gay Science</span><span class='attribution'>-Daniel Filan</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Homosexual agenda // Gay card</span><span class='attribution'>-Linch Zhang</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Handsy medics // Doctors without Borders</span><span class='attribution'>-Chana Messinger</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Road head // End of the drive</span><span class='attribution'>-Chana Messinger</span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Photometer // Foot pic</span><span class='attribution'></span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Body language // Corporation</span><span class='attribution'></span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Beat your meat // Beef jerky</span><span class='attribution'></span></div></li>
-		<li><div class='UMD NSFW'><span class='UMD_BODY'>Fantastic bum // Assonine</span><span class='attribution'>-Nathan Young</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Little death // Micromort</span><span class='attribution'>-Nathan Young</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Martial art // Painted soldiers</span><span class='attribution'>-Nathan Young</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>Mean girl // Mockingbird</span><span class='attribution'>-Sam Rosen</span></div></li>
-		<li><div class='UMD'><span class='UMD_BODY'>G unit // m/s^2</span><span class='attribution'>-Sam Rosen</span></div></li>
-	
-    </ul>
-
-
-    <!-- <div>
-
-        <p><em>For the NSFW version of this list, <a href="unparalleled-misalignments-nsfw.html">click here</a>. Not for the faint of heart.</em></p>
-
-    </div> -->
-</div>
-
-	<div id="last-updated"></div>
+		<!-- Google tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-2CYW1CTPDD"></script>
+		<script src="js/gtag.js"></script>
 		
-	<script>
+		<script src="nav.js"></script>
+	</head>
+
+
+	<body>
+		<!--Navigation bar-->
+		<div id="nav-placeholder"></div>
 		
-		// this part gets the file name from the URL.
-		var urlArray = window.location.href.split("/");
+		<div class="UMD_BODY">
+		
+			<p>
+				This is where I maintain a list of Unparalleled Misalignments (formerly <a href="https://twitter.com/NathanpmYoung/status/1576158901778624512">quadruple entendres</a>), pairs of non-synonymous phrases where the words in one phrase are each synonyms of the words in the other. I've mantained this list since 2018; many have contributed, attributions (when known) can be seen by hovering over the Unparalleled Misalignment in question. Add your own via <a href="https://forms.gle/jKrpMbqwFKuGtN2KA">this form</a>.
+			</p>
+			<div>
+				<input type="checkbox" id="toggleNSFW"> Hide NSFW values
+			</div>
+			<ul class="UMD_LIST">
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Butt dial // Booty call</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Father figure // Dad bod</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Home schooled // House trained</span><span class='attribution'></span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Manual labor // Hand job</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Forest fire // Amazon Kindle</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Casual sex // Lightrail</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Blanket statement // Pillow talk // Cover story</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Community building // Fraternity house</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Nap room // Sleeper cell</span><span class='attribution'></span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Geometric mean // Circle jerk</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Bottom feeder // Ass eater</span><span class='attribution'>-Cardi B</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Unit vector // One Direction</span><span class='attribution'>-Eric Neyman</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Quick sort // Short order</span><span class='attribution'>-Joe Reeve</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Private island // Secret Key</span><span class='attribution'>-Phil Parker</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Underdog // Subwoofer</span><span class='attribution'>-Richard Ngo</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Crimson Tide // Red Sea</span><span class='attribution'>-Ricki Heicklen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Economy class // Saving grace</span><span class='attribution'>-Skye Hersh</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Union Jack // Mutual masturbation</span><span class='attribution'>-SYAS</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>LessWrong // Down Bad</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Cow tools // Intimidation tactics</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Fast fashion // Taylor Swift // Quick Fix</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Workers' party // Helper function</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Drink menu // Spirit guide</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Arm wrestling // Gun Control</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Full moon // Fertile Crescent</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Speed limit // Amphetamine shortage</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Wire transfer // Electric slide</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Manhole cover // Buttplug</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Criminal record // Connotation // Prison letters</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Scared money // Chicken tender</span><span class='attribution'>-Dan Keys</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Service elevator // Utility maximizer</span><span class='attribution'>-Drake Thomas</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Sex symbol // Pound sign</span><span class='attribution'>-Drake Thomas</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Wave function // Beach party</span><span class='attribution'>-Eliana Lorch</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Unionized // Discharged</span><span class='attribution'>-Richard Ngo</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Hard drive // Rocky road</span><span class='attribution'>-Ricki Heicklen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Speed date // Fast day</span><span class='attribution'>-Ricki Heicklen</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Guard rails // Halter tops</span><span class='attribution'>-Ricki Heicklen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Late Bell // Dead Ringer</span><span class='attribution'>-Ricki Heicklen, Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Scene change // Bitcoin</span><span class='attribution'>-Skye Hersh</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Grass fed // Field agent</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Quick jab // Prompt injection</span><span class='attribution'>-Nathan Young</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Tollbooths // Bill Gates</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Security Setings // Stock Options</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Apple Home // Macbeth</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Bond Movie // Cling Film</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Microgravity // Mug</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Smarty pants // Intelligence briefs</span><span class='attribution'>-Dave Kasten</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Pascal's wager // Bar bet</span><span class='attribution'>-Drake Thomas</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Foggy bottom // Smoking ass</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>TED talk // Edward Said</span><span class='attribution'></span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Nuts and bolts // Comes and goes // Humpty Dumpty // Pump and dump</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Midjourney // Intermission</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Terminal value // Gate number</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Unparalleled // Misaligned</span><span class='attribution'>-Owen Cotton-Barratt, Stephen Casper</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Party trick // Ball gag</span><span class='attribution'>-Phil Parker</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Cancel culture // Anti-bacterial</span><span class='attribution'>-SYAS</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>House money // Cottage cheese // Home payment</span><span class='attribution'>-Dan Keys + Stephen Casper</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Iron man // Female</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Turing machine // Homogeneous system</span><span class='attribution'>-Linch Zhang</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Earnings call // Payphone</span><span class='attribution'>-Saul Munn</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Integral Calculus // Keystone</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Okay Boomer // KPop</span><span class='attribution'>-Nathan Young</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Stage Right // Set Aside // Stage Left</span><span class='attribution'>-Phil Parker</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Pascal's Wager // Bar Bet</span><span class='attribution'>-Nathan Young</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Hey Jude // Yosemite</span><span class='attribution'>-Ricki Heicklen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Ratfic // Tattletale</span><span class='attribution'>-Lily Jordan</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Hypothesis // Understatement</span><span class='attribution'>-Brian Smiley, Drake Thomas</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Bank Security // Coast Guard</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Downton // Featherweight</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Course selection // Class discrimination</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Minor correction // Key change</span><span class='attribution'>-Aric Floyd, Chana Messinger</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Framingham // Pig pen</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Telephone pole // Call log</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Jumbo shrimp // Majority // Big Short</span><span class='attribution'>-Brian Smiley, Linch Zhang</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Birth order // Labor force</span><span class='attribution'>-Dan Keys</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Local girl // Near miss</span><span class='attribution'>-Dan Keys</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Dark horse // Nightmare</span><span class='attribution'>-Eric Neyman</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Gut punch // Loot box</span><span class='attribution'>-Phil Parker</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Chicken coop // Cock cage</span><span class='attribution'>-Phil Parker</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Fish market // Poisson distribution</span><span class='attribution'>-Stephen Casper</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Harmonic mean // Constructive criticism</span><span class='attribution'>-Stephen Casper</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>White onion // Lightbulb</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Can opener // Fire starter</span><span class='attribution'>-Jake Eaton</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Lip service // Rim job</span><span class='attribution'>-Evžen Wybitul</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Playbill // Fake Money</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Pen Pal // Cellmate</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Turbo Mode // Fast Fashion</span><span class='attribution'>-Rosie Campbell</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Viceroy // Sinking</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Emancipation Proclamation // Free Speech</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Update // High Time</span><span class='attribution'>-Adam Scherlis</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Defiance // Unbetrothed</span><span class='attribution'>-Nathan Young</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Court Reporter // Bench Press</span><span class='attribution'>-Lily Jordan</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Original Sin // New Wave</span><span class='attribution'>-Michael Byun</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Comedy Club // Snickers Bar</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Shellshock // Surface Charge</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Knuckle Sandwich // Bone Meal</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Quiet Place // Shroom</span><span class='attribution'>-Toby</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>No Shit // Bar Stool</span><span class='attribution'>-Dan Keys</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Blood vessel // Relationship</span><span class='attribution'>-Drake Thomas</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Cold hard truth // Spiked iced tea</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Graphing calculator // Plot device</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Diversity statement // Minority report</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Power brakes // Battery Park</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Produce section // Make room</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Waterbill // Welfare</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Takeout container // Murder case</span><span class='attribution'>-Nix Goldowsky-Dill</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Platform ecosystem // Shelf life</span><span class='attribution'>-Owen Cotton-Barratt</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Negative correlation // Toxic relationship</span><span class='attribution'>-Ricki Heicklen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Fair trade // Lightswitch</span><span class='attribution'>-Rajashree Agrawal</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Speed stick // Hurricane</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Profit // High Fashion</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Rough Patch // Course Correction</span><span class='attribution'>-Phil Parker</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Bet on Love // Stake Through The Heart</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Content Creator // Peacemaker</span><span class='attribution'>-Adam Scherlis</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Presidential Powers // Executive Function // Killer App</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Come Full Circle // O-Ring</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Cat Eye // Purview</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Metanarrative // Facebook Account</span><span class='attribution'>-Lily Jordan</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Paper Grade // Pagerank</span><span class='attribution'>-Linchuan Zhang</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Briefcase // Speedy Trial</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Microchips // Small Fries</span><span class='attribution'>-Elliot Teperman</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Peacock // Veggie Sausage</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Emotion // Constant velocity // Pirate</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Point blank // Vector space</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Floor plan // Story plot</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Centrifuge // Coinbase</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Deer country // Stagnation</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Scroll lock // Document seal</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Operating system // Surgical procedure</span><span class='attribution'>-Dan Keys</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Hot take // Fire sale</span><span class='attribution'>-Maxwell Tabarrok</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Cleveland // Break ground</span><span class='attribution'>-Nathan Young</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Musical lineup // Instrumental convergence</span><span class='attribution'>-Ricki Heicklen</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Pregame // Foreplay</span><span class='attribution'>-Ricki Heicklen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Jewelry thief // Golden retreiver</span><span class='attribution'>-Ross Rheingans-Yoo</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Hamming circle // Pork pi(e)</span><span class='attribution'>-Stephen Casper, Ricki Heicklen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Palestine // Light beer</span><span class='attribution'>-Daniel Filan</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Crossword // Hate speech</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Stick vacuum // Cocksucker</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Case sensitive // Legal tender</span><span class='attribution'>-Ross Trudeau</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Small intestine // Semicolon</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Trustbuster // Oathbreaker</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Extraordinary // Super Basic</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Maker's Mark // Btzelem Elohim</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Invisible Hand // Phantom Limb</span><span class='attribution'>-Sam Rosen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Table Manners // Counter Culture</span><span class='attribution'>-Phil Parker</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Paddington // Download // Featherweight // Wingspan</span><span class='attribution'>-Phil Parker</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Prometheus Unbound // Free Delivery</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Club Hit // Gang Bang</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Denmark // Cave Painting</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Legal Brief // Just In Time</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Subset // Low Class // Bottom Bracket</span><span class='attribution'>-Ricki Heicklen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Wine Glasses // Beer Goggles</span><span class='attribution'>-Scott Alexander</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Left Behind // Sinister Six</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Drama Teacher // Stage Coach</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Truck Driver // Semiconductor</span><span class='attribution'>-Adam Scherlis</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Flatbread // Rent Money</span><span class='attribution'>-Lily Jordan</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Phoenix // Debt Cancellation</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Excommunication // Twitter DM</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Sleeping Bag // Napsack</span><span class='attribution'>-Nathan Young</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Solid State Drive // Ice Truck</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Menu // Boys School</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Abortion Debate // Stop Fighting</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Tea Party // Truth Social</span><span class='attribution'>-Adam Scherlis</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Air Gap // Windbreaker</span><span class='attribution'>-Rocket</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Big Break // Long Division</span><span class='attribution'>-Elliot Teperman</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Pascal Triangle // Pressure Point</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Beer Batter // Alcohol Abuse</span><span class='attribution'>-Adam Scherlis</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Ends of the Earth // Finland</span><span class='attribution'>-Adam Scherlis</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Mass Extinction // Weight Loss</span><span class='attribution'>-Dan Keys</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Cold Fusion // Cool Cat</span><span class='attribution'>-Ross Rheingans-Yoo</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Breezeblock // Windshield</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Blues scale // Depressed growth</span><span class='attribution'>-Rajashree Agrawal </span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Evergreen // Extrovert</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Show business // Proof of work</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Funky // Grand opening</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Road head // Street smarts</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Jumper cable // Skipping rope</span><span class='attribution'>-Alex Young</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Lit match // Good game</span><span class='attribution'>-Alex Young</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Whole Foods // Complete mess</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Picture frame // Movie setting</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Pub etiquette // Barcode</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Rock musician // Peter Singer</span><span class='attribution'>-Linch Zhang</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Post scarcity // Inbox zero</span><span class='attribution'>-Nathan Young</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Joint venture // Weed trip</span><span class='attribution'>-Stephen Casper</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Rich imagery // Dick pic</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Jew lover // Semitrailer</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Orthogonality thesis // Declaration of Independence</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Natural log // Native tree</span><span class='attribution'>-Stephen Casper</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Graveyard // Savage Garden</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Mailman // Reply Guy</span><span class='attribution'>-Dan Keys</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Airpod // Gas Tank</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Left Justification // Woke Ideology</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Candy Crush // Sweetheart</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Contour // Bad Trip</span><span class='attribution'>-Phil Parker</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Counterculture // Antibacterial</span><span class='attribution'>-Ricki Heicklen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>USB Power // Port Authority</span><span class='attribution'>-Michael Byun</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Crackpot // Super Bowl</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Balance Sheet // Equitable</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Photosynthesis // Image Generation</span><span class='attribution'>-Joshua Goller</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Deep Learning // Low Class</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Jet Fuel // Black Coffee</span><span class='attribution'>-Adam Scherlis</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Cellmate // Phone Sex</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Treasury Department // Breadboard</span><span class='attribution'>-Adam Scherlis</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>IMAX // Vision Pro</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>First Degree Murder // Cold Blooded</span><span class='attribution'>-Stephen Casper</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Move Fast and Break Things // Flash Crash</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Lord Ruler // Imperial Foot</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Statistical Parity // County Fair</span><span class='attribution'>-Michael Byun</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Side Hustle // Fringe Movement // Flanking Maneuver</span><span class='attribution'>-Sam Rosen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Men's Suit // Gentlemen's Club</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Fuckboy // Layman</span><span class='attribution'>-Adam Scherlis</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Reverend Bayes // Prior Probability</span><span class='attribution'>-Rob Miles</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Clone War // Replication Crisis</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Disbursement Plan // Scatterplot</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Autocorrect // Car Repair</span><span class='attribution'>-Adam Scherlis</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Playground // Dramamine</span><span class='attribution'>-Adam Scherlis</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Alto Sax // Top Brass</span><span class='attribution'>-Rocket</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Girl Talk // Miscommunication</span><span class='attribution'>-S</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Female intuition // Misdirection // Broadway</span><span class='attribution'>-Chana Messinger, Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>G20 // IQ Score</span><span class='attribution'>-Lily Jordan</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Speech Therapist // Word Doc</span><span class='attribution'>-Michael Byun</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Understanding // Low Rank</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Thin Mint // Litecoin</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Class Warfare // School Shooting</span><span class='attribution'>-Stephen Casper</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Hashtag // Pot Sticker</span><span class='attribution'>-S</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Merchant Vessel // Dealership</span><span class='attribution'>-Sam Rosen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Door Jamb  // Entrance Music</span><span class='attribution'>-Sam Rosen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Snakecase // Python Package</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Curtail // Bitchass</span><span class='attribution'>-Adam Scherlis</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Dropbox // Rain Barrel</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Unsanctioned // Defined</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Starboard // Sunbeam // Solar Panel</span><span class='attribution'>-Dan Keys, Adam Scherlis</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Seesaw // Sawblade</span><span class='attribution'>-Elliot Teperman</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Tire Rotation // Flag Twirling</span><span class='attribution'>-Michael Byun</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Artificial Intelligence // Synthetic Data</span><span class='attribution'>-AA</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Cold Case // Freeze Frame</span><span class='attribution'>-Claude</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Eyeball // Watch party</span><span class='attribution'>-Meabh Murphy</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Fishhook // Bass riff</span><span class='attribution'>-Ashwin</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Cleaning bill // Money laundering // Greenwashing</span><span class='attribution'>-Brian Smiley, Lily Jordan</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Baywatch // Naval gazing // Ocean View</span><span class='attribution'>-Constance Li, Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Barnes and Noble // Landed gentry</span><span class='attribution'>-Linch Zhang</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Mobile home // Movie house</span><span class='attribution'>-Dan Keys</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Commit message // Wedding invitation</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Easy choice // Natural selection</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Gay marriage ban // Fruity cantaloupe</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Sever ties // Connecticut</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Fried bread // Hot money</span><span class='attribution'>-Hugh Dow</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>White hot // Firecracker</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>CFAR // Longview</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Off the shelf // Deplatform</span><span class='attribution'>-Drake Thomas</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Rollcall // Turn signal</span><span class='attribution'>-Drake Thomas</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>High horse // Drug mule</span><span class='attribution'>-Linch Zhang</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Prompt engineering // Just-in-time manufacturing</span><span class='attribution'>-Nathan Young</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Charity Case // Nice rack</span><span class='attribution'>-Alice M</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Yellow fever // Gold rush</span><span class='attribution'>-Stephen Casper</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Fake shit // Shampoo</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Titration // Breast reduction</span><span class='attribution'>-Nathan Young</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Police emotions // Cop a feel</span><span class='attribution'>-Nathan Young</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Light switch // Small change // Minor Revision</span><span class='attribution'>-Peleg Shilo</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Discount buyer // Undertaker</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Novice boxer // Start-up incubator</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Batcave // Clubhouse</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Work bench // Labor law</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Newton's law // Binding of Isaac</span><span class='attribution'>-Stephen Casper</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Culinary school // Meal prep</span><span class='attribution'>-Dan Keys</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Dynamic filter // Movie screen // Motion capture // Moving pick</span><span class='attribution'>-Dan Keys</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Maxwell's demon // Utility monster</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Key info // Musical note</span><span class='attribution'>-Rafe Kennedy</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Burning man // Flaming homo</span><span class='attribution'>-Evžen Wybitul</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Instakill // Photo finish</span><span class='attribution'>-Rob Miles</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Starcraft // High Fashion</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Password  // Unarmed</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Gotta Go // Mustafar</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Clock Hand // Timeline</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Antifreeze // No Chill</span><span class='attribution'>-Phil Parker</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Organic Chemistry // Natural Charm</span><span class='attribution'>-Skye Hersh</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Break Time // Cleavage</span><span class='attribution'>-Chana Messinger, Eli Rose</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Moisture Meter // Waterlog</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Moonshine // Flashlight</span><span class='attribution'>-Ricki Heicklen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>West Wing // Sidearm</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Gangbang // Mass Shooting</span><span class='attribution'>-Rosie Campbell</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Cold Call // Frost Ring</span><span class='attribution'>-Claude</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Frequent Flyer // Daily Mail</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Sex Drive // Bang Bus</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Speed Reading // QuickBooks</span><span class='attribution'>-Rob Miles</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Lunatic // Moon Buggy</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Quatermaster // Money Manager</span><span class='attribution'>-Linchuan Zhang</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Energy Work // High Powered Job</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Premature Ejaculation // Second Sex</span><span class='attribution'>-Michael Byun</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Poe's Law // Stand Trial</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Calf Raise // Cow Lift</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Anal Fissure // Back Crack</span><span class='attribution'>-Michael Byun</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Google Maps // Alphabet City</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Cash Cow // Feeble</span><span class='attribution'>-Lily Jordan</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Liquidity Crisis // Drinking Problem</span><span class='attribution'>-Michael Byun</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Set Theory // Group Think</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Corporate Jargon // Body Language</span><span class='attribution'>-Adam Scherlis</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Discord Bot // Unfriendly AI</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Blunt Trauma // Joint Pain</span><span class='attribution'>-Rob Miles</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Looking Glass // C-Cup</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Starship // Celebrity Couple</span><span class='attribution'>-Adam Scherlis</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Average Joe // Medium Coffee</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Decaf Coffee // GI Joe</span><span class='attribution'>-@keyofgeo</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Kaleidoscope // Crash Site</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Transmission // Gay Agenda</span><span class='attribution'>-Adam Scherlis</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Rock Bottom // Punk Ass</span><span class='attribution'>-Adam Scherlis</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Twitter Ban // Exterminate</span><span class='attribution'>-Rob Miles</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Coin Purse // Dime Bag</span><span class='attribution'>-Rocket</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Game Day // Playdate</span><span class='attribution'>-Rocket</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Line Dance // Wire Tap</span><span class='attribution'>-Rocket</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Lady's Man // Misandry</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Current Account // Electric Bill</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Scarlet Letter // Red Card</span><span class='attribution'>-Stephen Casper</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Singing Circle // Belt Loop</span><span class='attribution'>-Adam Scherlis</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Civil Liberties // Polite Fiction</span><span class='attribution'>-Nathan Young</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Portland // Wine Country</span><span class='attribution'>-Rocket</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Colorado // Ethnic Conflict</span><span class='attribution'>-Adam Scherlis</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Manatee // Energy Drink</span><span class='attribution'>-Nathan Young</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Street Fair // Vigilante Justice</span><span class='attribution'>-Adam Scherlis</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Firewhiskey // Bootlicker</span><span class='attribution'>-Michael Byun</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Family Law // Bro Code</span><span class='attribution'>-Sam Rosen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Tombstone // Falling Rocks</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Bumpy Ride // Hard Drive</span><span class='attribution'>-Phillip Christoffersen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Land Acknowledgement // Touchdown Celebration</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Carl's Jr. // Charles II</span><span class='attribution'>-Elliot Teperman</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Silverback Gorilla // Agape</span><span class='attribution'>-Sam Rosen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Bed Linen // Crib Sheet</span><span class='attribution'>-Rosie Campbell</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Absolution // Gastric Acid</span><span class='attribution'>-Ricki Heicklen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Inverse Function // Poetry Hour</span><span class='attribution'>-Eli Rose</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Miniflask // Klein Bottle</span><span class='attribution'>-Phillip Christoffersen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Lighthouse // Sunroom</span><span class='attribution'>-Claude</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Backpropogation // Posterior distribution </span><span class='attribution'>-Rajashree Agrawal </span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Bush inauguration // Marijuana legalization</span><span class='attribution'>-Stephen Casper</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Endzone // Final destination // Last resort</span><span class='attribution'>-Linch Zhang, Cole Jackes</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Comedy Troupe // Silly Bandz</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Charge conservation // Emotional maintenance</span><span class='attribution'>-Rajashree Agrawal </span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Right angle // Conservative perspective</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Ball bearing // Party platform</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Daily bread // Chronic pain</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Elevator music // שיר המעלות</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Hard cash // Stale bread</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Discord // String of Insults</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Game plot // Toy Story</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Message length // Medium size</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Train route // Practice run</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>2-step verification // Dance competition</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Bear trap // Game stop</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Biological children // Carbon copies</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Box office // Case study</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Comfort zone // Pacific theater // Bedtime stories</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Good impression // Fine print</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>National anthem // Country music</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Solid state // Stable government</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Wire tap // Line dance</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Believe // Buzz off</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Dollar store // Money vault</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Gucci Mane // Nice hair</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Instrumental values // Music royalties</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Laptop // Thigh High</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Litter box // Trash bin</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Meditation Cushion // Thinkpad</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Parasite // Second location</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Perfect pitch // Compelling argument</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Postmates // Ex lovers</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Securities fraud // Taking stock</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Static variable // Charge differential</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Sudoku // Failed rebellion</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>By the way // Off the derech</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Core strength // Central tendency</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Feline // Iron Wire</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>After burners // Post anonymously</span><span class='attribution'>-Dan Keys</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Moving company // Emotional intimacy</span><span class='attribution'>-Dan Keys</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Odds and ends // p-values</span><span class='attribution'>-Dan Keys</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Acid rain // Mushroom cloud</span><span class='attribution'>-Drake Thomas</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Platonic realm // Friendzone</span><span class='attribution'>-Katja Grace</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Two pointer // Double meaning // Dual Use</span><span class='attribution'>-Katja Grace</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Birthday Song // New Age music</span><span class='attribution'>-Lily Jordan</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Tech bro // E-mail</span><span class='attribution'>-Lily Jordan</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Old friend // Stalemate</span><span class='attribution'>-Nathan Young</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Coast line // Bank wire</span><span class='attribution'>-Ricki Heicklen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Slim shady // Line sketch</span><span class='attribution'>-Sam Rosen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Snare drum // Trap music</span><span class='attribution'>-Sam Rosen</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Weeping willow // Morning wood</span><span class='attribution'></span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>High Society // Drug culture</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Solar eclipse // Sunblock</span><span class='attribution'>-Vania</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Artificial intelligence // Fake news</span><span class='attribution'>-William Woof</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Hamstrung // Hog tied</span><span class='attribution'>-Brian Smiley, Sam Rosen</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Lab coat // Doggy style</span><span class='attribution'>-Sam Rosen, Skye Hersh</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Coke can // Drug arrest</span><span class='attribution'>-Stephen Casper</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Joint distribution // Drug dealing</span><span class='attribution'>-Phil Parker</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Douchebag // Shower caddy</span><span class='attribution'>-Stephen Casper</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Gaelic // Lesbian kiss</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>End consumer // Ass eater</span><span class='attribution'></span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Gravity field // G-spot</span><span class='attribution'>-Nathan Young</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Bioluminescence // Fleshlight</span><span class='attribution'>-Sam Rosen</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Music critic // Vibrator</span><span class='attribution'>-Sam Rosen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Order of magnitude // Bulk buy</span><span class='attribution'>-js</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Privilege escalation // Social climbing</span><span class='attribution'>-js</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Thunderclap // Loud applause</span><span class='attribution'>-Peleg Shilo</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Linchpin // Hangnail</span><span class='attribution'>-Phillip Harris</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Principal investigator // Debt inspector</span><span class='attribution'>-Rajashree Agrawal</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Pull up bar // Parking ban</span><span class='attribution'>-Rajashree Agrawal</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Dark souls // Black lives</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Metaphysical // Instagram body</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Near term // Present condition</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Hideout // Bare skin</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Amtrak // Beeline</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Oral exam // Dental checkup</span><span class='attribution'>-Stephen Casper</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Super bass // Kingfisher</span><span class='attribution'>-Stephen Casper</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Dog whistle // Cat call</span><span class='attribution'>-Stephen Casper</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Hard to follow story // Scatter(ed) plot</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Army fatigues // Touring tires</span><span class='attribution'>-Dan Keys</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Han Solo // One China</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Alpha males // Amen</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Too bad // Double trouble</span><span class='attribution'>-Nathan Young</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Hot dog // Firefox</span><span class='attribution'>-Sam Rosen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Flamewar // Firefight</span><span class='attribution'>-Sam Rosen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Hit movie // Snuff film</span><span class='attribution'>-Everett Worth</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Flambeau // Hot stud</span><span class='attribution'>-Evžen Wybitul</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Monolith // Einstein</span><span class='attribution'>-Rob Miles</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Gigachad // Charlemagne</span><span class='attribution'>-Jose Luis Ricon</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Designer Drugs // High Fashion</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Leaves of Grass // Quitting Weed</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Loss Leader // Overlord</span><span class='attribution'>-Nathan Young</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Thin Air // Gasoline</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Rent Control // Split Custody</span><span class='attribution'>-Michael Byun</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Alley-oops // Road Accident</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Libertine // Emancipated Minor</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>French Open // Frog Dissection</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Barman // Stick Figure</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Starcraft // Pop Art</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Atlas Fellowship // World Peace</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Siren's Call // Emergency Contact</span><span class='attribution'>-Phil Parker</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Table Stakes // Counter Proposal</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Space Exploration // Cavity Search</span><span class='attribution'>-Joshua Goller</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Cancer Cell // Crab Cage</span><span class='attribution'>-Joshua Goller</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Uber Eats // Overbite</span><span class='attribution'>-Dan Keys</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Speed Reading // QuickBooks</span><span class='attribution'>-Rob Miles</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Leap Year // Time Travel</span><span class='attribution'>-Rosie Campbell</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Manifold Love // Polyamory</span><span class='attribution'>-Dan Keys</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Medical Rotation // Spin Doctor</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Water War // Liquidity Crisis</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Hit Record // Violent History</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Will Smith // Get Hammered</span><span class='attribution'>-Garrison Lovely</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>West Coast Swing // Californication</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Arts Funding // Cultural Appropriations</span><span class='attribution'>-Michael Byun</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Whipping Cream // Battery Fluid</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Speedrun // Fast Track</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>GrubHub // Food Court</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Arm Lock // Gun Safe</span><span class='attribution'>-Joshua Goller</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Take Down // Profit Loss</span><span class='attribution'>-Joshua Goller</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>False Advertising // Market Cap</span><span class='attribution'>-Sam Rosen</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Love Seat // Sex Swing // Reproduction Furniture</span><span class='attribution'>-Adam Scherlis</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>German Empire // Decolonization</span><span class='attribution'>-Michael Byun</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Monopoly Money // Playbill</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Honey Trap // Sweet Pickle</span><span class='attribution'>-Elliot Teperman</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Vegetative State // Greenland</span><span class='attribution'>-Sam Rosen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Baggage Drop // Trauma Dump</span><span class='attribution'>-Ricki Heicklen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Bottom Text // Subscribe</span><span class='attribution'>-Ricki Heicklen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Oral Sex // Jawbone</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Look Again // Seymour</span><span class='attribution'>-Elliot Teperman</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>BetterHelp // Rite Aid</span><span class='attribution'>-Eli Rose</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Fine Structure // Tax Basis</span><span class='attribution'>-Adam Scherlis</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>High Command // Tall Order</span><span class='attribution'>-Adam Scherlis</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Boundary Condition // Border Crisis</span><span class='attribution'>-Michael Byun</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Mobile Wallet // Phone Bank</span><span class='attribution'>-Michael Byun</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Finite State // Limited Government</span><span class='attribution'>-Michael Byun</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>High Time // Stone Age</span><span class='attribution'>-Elliot Teperman</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Universe // Monosyllabic</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Typeface // Letterhead</span><span class='attribution'>-S</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Girl Power // Mismanagement</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Girl Fight // Mismatch</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Lady Luck // Misfortune</span><span class='attribution'>-catGPT</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Girl Math // Miscalculation</span><span class='attribution'>-Hyperdiscogirl</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Licorice // Whiskey on the Rocks</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Sperm Bank // Nut Case</span><span class='attribution'>-Michael Byun</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Diet Coke // Light Blow</span><span class='attribution'>-Rocket</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Word Doc // Term Paper</span><span class='attribution'>-S</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Nofap // Anticlimax</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Carton // Driveway</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Street Smarts // GG</span><span class='attribution'>-Dan Keys</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Depth Charge // Bottom Dollar</span><span class='attribution'>-Adam Scherlis</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Class Action // Good Move</span><span class='attribution'>-Rosie Campbell</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Count On // Lord Over</span><span class='attribution'>-Dan Keys</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Work Break // Division of Labor</span><span class='attribution'>-Elliot Teperman</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Climax Community // Cumtown</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Typescript // Keywords</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>About Time // Fight Night</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Slaughterhouse // Hunting Lodge</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Timeout // TikTok Ban</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Clock Face // Tick Head</span><span class='attribution'>-Elliot Teperman</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Umpire // Aflame</span><span class='attribution'>-Richard Ngo</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Stopwatch // Wait and See</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Metalhead // Iron Dome</span><span class='attribution'>-Sam Rosen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Minor Key // Child Lock</span><span class='attribution'>-Rob Miles, Toby</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Unfurnished  // Notable</span><span class='attribution'>-Phillip Christoffersen, Toby</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Massive L // Gigaflop</span><span class='attribution'>-Daniel Filan</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Medical Stitches // Docstring</span><span class='attribution'>-Phillip Christoffersen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Spruce Up // Log Out</span><span class='attribution'>-Sam Rosen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Swing State // Polyphase</span><span class='attribution'>-Adam Scherlis</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Tire Iron // Somniferous</span><span class='attribution'>-Michael Byun</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Power Set // Elite Group</span><span class='attribution'>-Eli Rose</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Juice Box // Gas Tank</span><span class='attribution'>-Dan Keys</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Unbothered // Debugged</span><span class='attribution'>-Phillip Christoffersen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Bank run // Side hustle</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Wild swerve // Locomotion</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Minor correction // Juvenile detention</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Birdwatcher // Eagle scout</span><span class='attribution'>-ChatGPT</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Bad boy // Junk mail</span><span class='attribution'>-Nathan Young</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Broken jaw // Smashmouth</span><span class='attribution'>-Stephen Casper</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Externalize // Out of sight</span><span class='attribution'>-Drake Thomas</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Chopped liver // Surgery survivor</span><span class='attribution'>-Dan Keys</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Quizzical // Testicle</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Goose chase // Duck hunt</span><span class='attribution'>-Stephen Casper</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Public shaming // Celebrity crush</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Rental car // Truculent</span><span class='attribution'>-Nathan Young</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Digits of pi // Finger food</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Surgeon General // Dr. King</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Cross-attention // Ford Focus</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Father time // Parsec</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>First course // Intro class</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Fruit flies // Applebees</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Slam poetry // Punchlines</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Holy roller // Dharma wheel</span><span class='attribution'>-@gmbrighteyes</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Detailed // Unfollowed</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Dominos delivery // Lord's salvation</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Eggnog // Transcranial</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Fat chance // Vast fortune</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Switchboard // Turntable</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Alien species // Space race</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Box cutter // Battleship</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Business class // Work study</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Case notes // Skin tones</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Constructive criticism // Fine Wine</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Digital copy // Cloud cover</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Harmonies // Joint pain // Blunt trauma</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Postcode // Afterword</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Radiohead // Wave crest</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Speed dating // Zoom meeting</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Square off // Cell death</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Stump speech // Small talk</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Texas Hold-em // State capture</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>House fire // Cabin fever // Homesick</span><span class='attribution'>-Aric Floyd, Drake Thomas</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Babylon // Keep talking</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Billboard // Congressional commitee</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Breakfast // High speed crash</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Check mark // Chess notation</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Chest Muscle // Strongbox</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Church organ // Body of Christ</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Coke Zero // Drug free</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Deadwood // Latent</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Dollar sign // Price tag</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Gas stop // Phil Parker</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Landrover // Contental Drift</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Latent Heat // Concealed firearm</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Major depression // Grand Canyon</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>No judgement // Sanskrit</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Ocean liner // Waterskin</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Partial derivative // Fractionalized asset</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Phoenix // Debt Cancellation</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Profession // Public denouncement</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Short positions // Low Places</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Sincere // Hellfire</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Soylent // I'm giving up</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Stamp act // Tap dance</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Stop sign // Countersignal</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Street food // Nominally</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Supply and demand // Give and take</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Travel expenses // Venture capital</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Turnout // Twistoff</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Unsong // One-note</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Windbreaker // Blown fuse</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Value drift // Asset volatility // Cash flow</span><span class='attribution'>-Brian Smiley, Phil Parker</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Google Doc // WebMD</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Rear admiral // Backseat driver</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Sickness pay // Coffee</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Dark matter // Midnight Mass</span><span class='attribution'>-Dan Keys</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Neighborhood watch // Local time</span><span class='attribution'>-Dan Keys</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Organic chemistry // Carbon dating</span><span class='attribution'>-Dan Keys</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Sporting goods // Virtue signaling</span><span class='attribution'>-Dan Keys</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Ballroom dance // Roundhouse kick</span><span class='attribution'>-Drake Thomas</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>𝚒𝚖𝚙𝚘𝚛𝚝 𝚖𝚊𝚝𝚑 // Significant digits</span><span class='attribution'>-Drake Thomas</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Karman line // Trucker convoy</span><span class='attribution'>-Drake Thomas</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Underwriting // Subtext</span><span class='attribution'>-Katja Grace</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Course correction // Curriculum learning</span><span class='attribution'>-Miles Turpin</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Fever pitch // Sick note</span><span class='attribution'>-Nathan Young</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Flattering // Dead wrong</span><span class='attribution'>-Nathan Young</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Rented room // Flatulent</span><span class='attribution'>-Nathan Young</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Reptile overlords // Queen Liz</span><span class='attribution'>-Nathan Young</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Spirited // Licorice</span><span class='attribution'>-Nathan Young</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Viewfinder // Seesaw</span><span class='attribution'>-Nathan Young</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Launch pad // Throw pillow</span><span class='attribution'>-Phil Parker</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>IP theft // Synthesis</span><span class='attribution'>-Richard Ngo</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Multi-cooler // Maniac</span><span class='attribution'>-Richard Ngo</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Doublespeak // Duolingo</span><span class='attribution'>-Ricki Heicklen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Word play // Talk show</span><span class='attribution'>-Ricki Heicklen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Bank vault // Crypt o' currency</span><span class='attribution'>-Ross Rheingans-Yoo</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Heat sink // Hot tub</span><span class='attribution'>-Ross Rheingans-Yoo</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Annul // Alpha Zero // 10 // Unzip</span><span class='attribution'>-Sam Marks</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Wirehead // Transfer of power</span><span class='attribution'>-Sam Marks</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Collateral damage // Insurance fraud</span><span class='attribution'>-Sam Rosen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Holy see // Divine vision</span><span class='attribution'>-Sam Rosen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Large coffee // Fat Joe</span><span class='attribution'>-Sam Rosen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Prolapse // Olympic run</span><span class='attribution'>-Sam Rosen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Spectrometer // Graveyard</span><span class='attribution'>-Sam Rosen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Subway // Low road // Underpass</span><span class='attribution'>-Sam Rosen</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Smash Bros // Fuckbuddies</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Flower power // Vegemite</span><span class='attribution'>-Sophia Brown</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Cave bear // Concealed carry</span><span class='attribution'>-Stephen Casper</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Primrose path // Happy trail</span><span class='attribution'>-Stephen Casper</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Sheetpan // Flatbread</span><span class='attribution'>-Stephen Casper</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Star Wars // Solar flare</span><span class='attribution'>-Stephen Casper</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Blow job // Drug trade</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Stocking stuffer // Tight Squeeze</span><span class='attribution'>-Alex Young</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Weed wacker // Drug bust</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Deviled egg // Hellspawn</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Lost Heart // Love is Blind</span><span class='attribution'>-Peleg Shilo</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Shotgun Wedding // Combined arms</span><span class='attribution'>-Peleg Shilo</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Headliner // Foreskin // Topsheet  // Front-runner</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Matchpoint // Date spot</span><span class='attribution'>-Peleg Shilo</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Pot pie // Weed brownie</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Roughhousing // Broken home // Violent case // Rugged jacket</span><span class='attribution'>-Rajashree Agrawal</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Watery eye // Washed out perspective</span><span class='attribution'>-Rajashree Agrawal</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Instant noodle // Minute futzing</span><span class='attribution'>-Rajashree Agrawal</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Prima donna // First lady</span><span class='attribution'>-Watson Ladd</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Tight squeeze // Loving relationship</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Dragon // Pullover</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Neolithic // The One stone // Einstein</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Eternal Father // Absolute motherfucker</span><span class='attribution'>-Katja Grace</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Status game arena // Level playing field</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Pro bono // Competitive edge</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Broadcast // Female company</span><span class='attribution'>-Nathan Young</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Funeral service // Rest mass</span><span class='attribution'>-Aric Floyd</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Drug Mule // Ass Crack</span><span class='attribution'>-Sam Rosen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Limp bizkit // Unleavened bread</span><span class='attribution'>-Stephen Casper</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Stimulus package // Beat box</span><span class='attribution'>-Stephen Casper</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Drag performance // Smoke show</span><span class='attribution'>-Sam Rosen, Skye Hersh</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Queen mattress // Pillow princess</span><span class='attribution'>-Stephen Casper</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Meatloaf // Cockblock</span><span class='attribution'></span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Lingua Franca // French kissing</span><span class='attribution'>-Stephen Casper</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Executive function // Killer app</span><span class='attribution'>-Dan Keys</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Secular humanism // Catholic anthropology</span><span class='attribution'>-Daniel Filan</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>San Diego // Beach body</span><span class='attribution'>-Daniel Filan</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Jet lag // Delayed flight</span><span class='attribution'>-Daniel Filan</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Mile // Personal failure</span><span class='attribution'>-Daniel Filan</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Homo Sapiens // The Gay Science</span><span class='attribution'>-Daniel Filan</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Homosexual agenda // Gay card</span><span class='attribution'>-Linch Zhang</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Handsy medics // Doctors without Borders</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Road head // End of the drive</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Photometer // Foot pic</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Body language // Corporation</span><span class='attribution'></span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Beat your meat // Beef jerky</span><span class='attribution'></span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>Fantastic bum // Assonine</span><span class='attribution'>-Nathan Young</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Little death // Micromort</span><span class='attribution'>-Nathan Young</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Martial art // Painted soldiers</span><span class='attribution'>-Nathan Young</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Mean girl // Mockingbird</span><span class='attribution'>-Sam Rosen</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Honour society // חברה קדישא</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Sunken // Solar Science</span><span class='attribution'>-Adam Scherlis</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Hell hound // Hot dog</span><span class='attribution'>-Eleanor</span></div></li>
+				<li><div class='UMD NSFW'><span class='UMD_BODY'>School shooting // Gang bang</span><span class='attribution'>-Eleanor</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>American Art // Yankee Doodle</span><span class='attribution'>-Jacob Falkovich</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Watch Band // Timeframe</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Lawsuit // Courtroom Attire</span><span class='attribution'>-Chana Messinger</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Neocon // Crime Novel</span><span class='attribution'>-Michael Byun</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Rap Battle // Hitbox</span><span class='attribution'>-Robert Mushkatblat</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Will Smith // Forge Ahead</span><span class='attribution'>-Brian Smiley</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Fastball // Hypersphere</span><span class='attribution'></span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Golden Curry // Auspices</span><span class='attribution'>-Michael Byun</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Astral Projection // Space Opera</span><span class='attribution'>-Elliot Teperman</span></div></li>
+				<li><div class='UMD'><span class='UMD_BODY'>Anonymous sex // Filling in the blank</span><span class='attribution'></span></div></li>
+			</ul>
+		</div>
 
-		var nameOfThisPage = urlArray[urlArray.length-1];
-
-		// this part uses the github API to get the last commit date for that file, and then writes a line the HTML body.
-
-		// future Ricki, this is a function. It is in Arrow syntax. You should learn this.
-		const getCommits = async pageName => {
-
-			var result = await fetch('https://api.github.com/repos/rickiheicklen/rickiheicklen.github.io/commits?path='+ encodeURIComponent(pageName));
-
-			var data = await result.json();
-
-			var timestamp = new Date(data[0].commit.author.date)
-			// the Date function takes a date string, and returns a date object.
-
-			//var month = timestamp.getMonth()
-
-
-			var formattedDate = timestamp.toDateString()
-
-			console.log(formattedDate)
-
+		<div id="last-updated"></div>
 			
-
-
-			document.getElementById('last-updated').innerHTML = "<p><br><i>This page was last updated on "+ formattedDate + ".</i></p>";
-
-
-			}
-
-			// const data = await getCommits('test');
-			// Make some notes about Await and what it does.
-			// Note that you can only use await inside of an async function.
+		<script>
 			
-			getCommits(nameOfThisPage);
+			// this part gets the file name from the URL.
+			var urlArray = window.location.href.split("/");
 
-			document.getElementById('toggleNSFW').checked = false;
-			
-			document.getElementById('toggleNSFW').addEventListener('change', function() {
-			var nsfwDivs = document.getElementsByClassName('UMD NSFW');
-			for (var i = 0; i < nsfwDivs.length; i++) {
-				var liElement = nsfwDivs[i].closest('li');
-				if (this.checked) {
-					liElement.style.display = 'none';
-				} else {
-					liElement.style.display = 'list-item';
+			var nameOfThisPage = urlArray[urlArray.length-1];
+
+			// this part uses the github API to get the last commit date for that file, and then writes a line the HTML body.
+
+			// future Ricki, this is a function. It is in Arrow syntax. You should learn this.
+			const getCommits = async pageName => {
+
+				var result = await fetch('https://api.github.com/repos/rickiheicklen/rickiheicklen.github.io/commits?path='+ encodeURIComponent(pageName));
+
+				var data = await result.json();
+
+				var timestamp = new Date(data[0].commit.author.date)
+				// the Date function takes a date string, and returns a date object.
+
+				//var month = timestamp.getMonth()
+
+
+				var formattedDate = timestamp.toDateString()
+
+				console.log(formattedDate)
+
+				
+
+
+				document.getElementById('last-updated').innerHTML = "<p><br><i>This page was last updated on "+ formattedDate + ".</i></p>";
+
+
 				}
-			}
-		});
-			
+
+				// const data = await getCommits('test');
+				// Make some notes about Await and what it does.
+				// Note that you can only use await inside of an async function.
+				
+				getCommits(nameOfThisPage);
+
+				document.getElementById('toggleNSFW').checked = false;
+				
+				document.getElementById('toggleNSFW').addEventListener('change', function() {
+				var nsfwDivs = document.getElementsByClassName('UMD NSFW');
+				for (var i = 0; i < nsfwDivs.length; i++) {
+					var liElement = nsfwDivs[i].closest('li');
+					if (this.checked) {
+						liElement.style.display = 'none';
+					} else {
+						liElement.style.display = 'list-item';
+					}
+				}
+			});
+				
 		</script>
+	</body>
+</html>
